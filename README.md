@@ -142,7 +142,7 @@ Lower `ncd` = more similar to known malware.
 | Setting | Value |
 |---|---|
 | Comparison unit | Per file; files > 16 KB split into 8 KB chunks with 4 KB overlap |
-| Compressor | Raw LZMA2 (liblzma), preset 6 + extreme, 1 MB dictionary, `lc = 3` |
+| Compressor | Raw LZMA2 (liblzma), preset 6 (extreme off), 1 MB dictionary, `lc = 3` |
 | Package score | Most suspicious file/chunk (minimum NCD) |
 | Stage 1 threshold | Tuned for ~99% malware recall on validation data |
 | Stage 2 model | ModernBERT-base, fine-tuned, 8-bit quantized ONNX |
