@@ -50,6 +50,7 @@ PackGuard/
 │   ├── chunker.c / .h          # Per-file split into 8 KB overlapping chunks
 │   ├── report.c / .h           # JSON output per package
 │   ├── platform.c / .h         # Threads, directory walk, clock (POSIX and Win32)
+│   ├── packguard.manifest      # Windows: UTF-8 code page, long paths
 │   └── ai_filter.c / .h        # Stage 2 inference (ONNX Runtime C API), planned
 ├── training/
 │   └── finetune_packguard.py   # Stage 2 fine-tuning (Hugging Face), planned
@@ -57,6 +58,7 @@ PackGuard/
 ├── tests/                      # Test inputs and outputs, one folder per function
 ├── experiments/                # Configs and result logs per version
 ├── docs/                       # Design notes (memory safety and ownership)
+├── scripts/build-windows.ps1   # Native Windows build (zig + static liblzma)
 ├── Makefile                    # Linux/macOS build
 ├── Dockerfile                  # Containerised scanner build
 └── README.md
@@ -68,6 +70,7 @@ PackGuard/
 |---|---|
 | C compiler | C17: GCC 11+ or Clang 14+ |
 | GNU Make | 4.x |
+| Windows native build | zig 0.16+, CMake 3.20+, GNU Make (e.g. `winget install zig.zig Kitware.CMake ezwinports.make`) |
 | liblzma (xz) | 5.4.x or a recent 5.8.x — **never 5.6.0 or 5.6.1** (CVE-2024-3094 backdoor) |
 | ONNX Runtime | 1.20+ (C API, prebuilt release) |
 | Python | 3.10+ |
@@ -86,7 +89,7 @@ xcode-select --install
 brew install xz pkg-config
 ```
 
-On Windows, use WSL and follow the Linux commands.
+On Windows, either use WSL and follow the Linux commands, or build natively (step 3b).
 
 Check the installed liblzma version is not 5.6.0 or 5.6.1:
 
@@ -106,6 +109,15 @@ make clean                               # removes build output
 ```
 
 For a single self-contained binary, link liblzma statically (`liblzma.a`); it is small and has no further dependencies. The Makefile already does this.
+
+### 3b. Or build natively on Windows
+
+```powershell
+.\scripts\build-windows.ps1          # produces build\packguard.exe
+.\scripts\build-windows.ps1 -Clean   # rebuilds liblzma too
+```
+
+The script downloads the xz 5.8.3 source, checks its pinned SHA-256 (the release is signed by Lasse Collin, key `3690 C240 CE51 B467 0D30 AD1C 38EE 757D 6918 4620`), builds a static liblzma with zig and links a single `packguard.exe` that uses Win32 threads on every logical processor. It gives byte-identical reports to the Linux build. Malware must still be handled only inside WSL, so on Windows scan only benign code.
 
 ### 4. Or build with Docker
 
