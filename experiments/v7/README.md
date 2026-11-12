@@ -58,3 +58,17 @@ two scripts above.
 ```bash
 packguard --mode known -B ~/packguard-data/v7/benign_refs <malware_refs> <package>
 ```
+
+## Combined malware references
+
+`merge_malware_refs.py` folds the extracted v1 and v2 malware sets into one
+directory, keeping a single copy of every file:
+
+```bash
+python3 experiments/v7/scripts/merge_malware_refs.py
+```
+
+On 2026-11-06 the 77,742 files of v1 and v2 held 23,444 distinct contents, so
+54,298 duplicates were dropped and 1.66 GiB became 486 MiB. The combined set
+reaches 91,639 distinct raw chunks against 72,518 for v1 and 73,420 for v2, and
+leaves the score of a benign control unchanged.

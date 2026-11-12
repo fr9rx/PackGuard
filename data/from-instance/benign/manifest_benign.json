@@ -1,0 +1,136 @@
+{
+ "source": "/home/fr9rx/packguard-data/v7/benign_refs",
+ "prefix": "benign",
+ "password": "infected",
+ "packages": 2549,
+ "archives": [
+  {
+   "zip": "benign_0.zip",
+   "packages": 162,
+   "files": 2809,
+   "bytes": 1911755,
+   "entries": 2809,
+   "first_entry_bytes": 703
+  },
+  {
+   "zip": "benign_1.zip",
+   "packages": 163,
+   "files": 1822,
+   "bytes": 1861923,
+   "entries": 1822,
+   "first_entry_bytes": 53987
+  },
+  {
+   "zip": "benign_2.zip",
+   "packages": 165,
+   "files": 1638,
+   "bytes": 1825981,
+   "entries": 1638,
+   "first_entry_bytes": 1876
+  },
+  {
+   "zip": "benign_3.zip",
+   "packages": 155,
+   "files": 2913,
+   "bytes": 2035520,
+   "entries": 2913,
+   "first_entry_bytes": 34608
+  },
+  {
+   "zip": "benign_4.zip",
+   "packages": 155,
+   "files": 1864,
+   "bytes": 1791773,
+   "entries": 1864,
+   "first_entry_bytes": 3869
+  },
+  {
+   "zip": "benign_5.zip",
+   "packages": 182,
+   "files": 1957,
+   "bytes": 1920308,
+   "entries": 1957,
+   "first_entry_bytes": 101
+  },
+  {
+   "zip": "benign_6.zip",
+   "packages": 171,
+   "files": 2043,
+   "bytes": 2214631,
+   "entries": 2043,
+   "first_entry_bytes": 18583
+  },
+  {
+   "zip": "benign_7.zip",
+   "packages": 166,
+   "files": 1662,
+   "bytes": 1720538,
+   "entries": 1662,
+   "first_entry_bytes": 460
+  },
+  {
+   "zip": "benign_8.zip",
+   "packages": 163,
+   "files": 1703,
+   "bytes": 1709055,
+   "entries": 1703,
+   "first_entry_bytes": 92
+  },
+  {
+   "zip": "benign_9.zip",
+   "packages": 127,
+   "files": 1163,
+   "bytes": 1261019,
+   "entries": 1163,
+   "first_entry_bytes": 26814
+  },
+  {
+   "zip": "benign_a.zip",
+   "packages": 139,
+   "files": 1252,
+   "bytes": 1338838,
+   "entries": 1252,
+   "first_entry_bytes": 4560
+  },
+  {
+   "zip": "benign_b.zip",
+   "packages": 144,
+   "files": 1575,
+   "bytes": 1515150,
+   "entries": 1575,
+   "first_entry_bytes": 21470
+  },
+  {
+   "zip": "benign_c.zip",
+   "packages": 156,
+   "files": 1179,
+   "bytes": 1419414,
+   "entries": 1179,
+   "first_entry_bytes": 115
+  },
+  {
+   "zip": "benign_d.zip",
+   "packages": 162,
+   "files": 2708,
+   "bytes": 2145429,
+   "entries": 2708,
+   "first_entry_bytes": 2519
+  },
+  {
+   "zip": "benign_e.zip",
+   "packages": 163,
+   "files": 1708,
+   "bytes": 1808753,
+   "entries": 1708,
+   "first_entry_bytes": 1229
+  },
+  {
+   "zip": "benign_f.zip",
+   "packages": 176,
+   "files": 1658,
+   "bytes": 1963079,
+   "entries": 1658,
+   "first_entry_bytes": 22914
+  }
+ ]
+}

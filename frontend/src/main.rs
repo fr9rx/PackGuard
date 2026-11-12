@@ -214,7 +214,7 @@ fn report_directory(opts: &Options) -> (PathBuf, bool) {
 
 fn default_stage2_script() -> Option<PathBuf> {
     let relative = PathBuf::from("stage 2 LLM Model")
-        .join("v2")
+        .join("v3")
         .join("stage2_filter.py");
     let mut roots = Vec::new();
     if let Ok(executable) = env::current_exe() {

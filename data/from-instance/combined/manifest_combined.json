@@ -1,0 +1,136 @@
+{
+ "source": "/home/fr9rx/packguard-data/combined/malware_js",
+ "prefix": "combined",
+ "password": "infected",
+ "packages": 8440,
+ "archives": [
+  {
+   "zip": "combined_0.zip",
+   "packages": 539,
+   "files": 1962,
+   "bytes": 6444756,
+   "entries": 1962,
+   "first_entry_bytes": 2449
+  },
+  {
+   "zip": "combined_1.zip",
+   "packages": 522,
+   "files": 975,
+   "bytes": 5538814,
+   "entries": 975,
+   "first_entry_bytes": 2946
+  },
+  {
+   "zip": "combined_2.zip",
+   "packages": 533,
+   "files": 1140,
+   "bytes": 4269873,
+   "entries": 1140,
+   "first_entry_bytes": 1906
+  },
+  {
+   "zip": "combined_3.zip",
+   "packages": 486,
+   "files": 1105,
+   "bytes": 3893504,
+   "entries": 1105,
+   "first_entry_bytes": 4184
+  },
+  {
+   "zip": "combined_4.zip",
+   "packages": 575,
+   "files": 1297,
+   "bytes": 4278794,
+   "entries": 1297,
+   "first_entry_bytes": 3135
+  },
+  {
+   "zip": "combined_5.zip",
+   "packages": 564,
+   "files": 1850,
+   "bytes": 5693247,
+   "entries": 1850,
+   "first_entry_bytes": 4189
+  },
+  {
+   "zip": "combined_6.zip",
+   "packages": 500,
+   "files": 1543,
+   "bytes": 6848874,
+   "entries": 1543,
+   "first_entry_bytes": 1067
+  },
+  {
+   "zip": "combined_7.zip",
+   "packages": 539,
+   "files": 1298,
+   "bytes": 3837962,
+   "entries": 1298,
+   "first_entry_bytes": 141
+  },
+  {
+   "zip": "combined_8.zip",
+   "packages": 530,
+   "files": 1297,
+   "bytes": 4188237,
+   "entries": 1297,
+   "first_entry_bytes": 993
+  },
+  {
+   "zip": "combined_9.zip",
+   "packages": 515,
+   "files": 1117,
+   "bytes": 5108990,
+   "entries": 1117,
+   "first_entry_bytes": 8407
+  },
+  {
+   "zip": "combined_a.zip",
+   "packages": 513,
+   "files": 1850,
+   "bytes": 4147225,
+   "entries": 1850,
+   "first_entry_bytes": 3561
+  },
+  {
+   "zip": "combined_b.zip",
+   "packages": 541,
+   "files": 1410,
+   "bytes": 4800653,
+   "entries": 1410,
+   "first_entry_bytes": 8646
+  },
+  {
+   "zip": "combined_c.zip",
+   "packages": 510,
+   "files": 1602,
+   "bytes": 4684474,
+   "entries": 1602,
+   "first_entry_bytes": 57172
+  },
+  {
+   "zip": "combined_d.zip",
+   "packages": 506,
+   "files": 1927,
+   "bytes": 5597356,
+   "entries": 1927,
+   "first_entry_bytes": 2222
+  },
+  {
+   "zip": "combined_e.zip",
+   "packages": 550,
+   "files": 1802,
+   "bytes": 6009564,
+   "entries": 1802,
+   "first_entry_bytes": 4147105
+  },
+  {
+   "zip": "combined_f.zip",
+   "packages": 517,
+   "files": 1269,
+   "bytes": 4465026,
+   "entries": 1269,
+   "first_entry_bytes": 3151
+  }
+ ]
+}

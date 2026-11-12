@@ -70,6 +70,7 @@ PackGuard/
 ├── experiments/v4/             # v4 renamed/mangled benchmark: T1-T4 transforms, results
 ├── experiments/v5/             # v5 two-mode design: known v4c2 mode and new-campaign mode
 ├── experiments/v6/             # v6 known mode: benign veto, payload files, repeat collapsing
+├── test-sets/                  # Large known/new mode test sets: generators, manifests, server harness
 ├── docs/                       # Running guide, folder layout, design notes and suggestions
 ├── scripts/build-windows.ps1   # Native Windows build (zig + static liblzma)
 ├── Makefile                    # Linux/macOS build
@@ -302,6 +303,8 @@ The v1 malware set is in `data/v1/malware_js_0.zip` to `malware_js_f.zip` (encry
 - [OpenSSF malicious-packages](https://github.com/ossf/malicious-packages) (used to confirm live-scan detections)
 
 Benign packages are downloaded from the public npm registry. Near-duplicates are removed and data is **split by publication date** to simulate detecting unseen attacks. v6 adds a raw corpus of 6,014 benign npm tarballs (popular and long-tail, every test package name excluded), filtered into the benign reference set and a validation set; see [`dataset_index.md`](dataset_index.md).
+
+[`test-sets/`](test-sets/README.md) holds the generators, manifests and server scan harness for the large per-mode test sets: 20,135 packages covering the categories of `--mode known` and `--mode new`, each mixed from downloaded DataDog samples and authored inert packages. The plaintext samples stay on the GCE instance.
 
 ## Evaluation
 

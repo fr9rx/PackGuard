@@ -1,0 +1,191 @@
+{
+ "reports": [
+  {
+   "set": "known",
+   "kind": "invented",
+   "category": "T1_format",
+   "packages": 10,
+   "flagged": 10,
+   "flagged_pct": 100.0,
+   "primitive_flagged": 0,
+   "median_score": 0.0,
+   "threshold": 0.7
+  },
+  {
+   "set": "known",
+   "kind": "invented",
+   "category": "T2_rename",
+   "packages": 10,
+   "flagged": 10,
+   "flagged_pct": 100.0,
+   "primitive_flagged": 0,
+   "median_score": 0.0,
+   "threshold": 0.7
+  },
+  {
+   "set": "known",
+   "kind": "invented",
+   "category": "T3_padding",
+   "packages": 10,
+   "flagged": 10,
+   "flagged_pct": 100.0,
+   "primitive_flagged": 0,
+   "median_score": 0.0,
+   "threshold": 0.7
+  },
+  {
+   "set": "known",
+   "kind": "invented",
+   "category": "T4_base64",
+   "packages": 10,
+   "flagged": 10,
+   "flagged_pct": 100.0,
+   "primitive_flagged": 0,
+   "median_score": 0.0,
+   "threshold": 0.7
+  },
+  {
+   "set": "known",
+   "kind": "real",
+   "category": "mal_known",
+   "packages": 10,
+   "flagged": 10,
+   "flagged_pct": 100.0,
+   "primitive_flagged": 0,
+   "median_score": 0.0,
+   "threshold": 0.7
+  },
+  {
+   "set": "known",
+   "kind": "real",
+   "category": "mal_newname",
+   "packages": 10,
+   "flagged": 9,
+   "flagged_pct": 90.0,
+   "primitive_flagged": 0,
+   "median_score": 0.0,
+   "threshold": 0.7
+  },
+  {
+   "set": "known",
+   "kind": "real",
+   "category": "mal_newver",
+   "packages": 200,
+   "flagged": 125,
+   "flagged_pct": 62.5,
+   "primitive_flagged": 0,
+   "median_score": 0.2647,
+   "threshold": 0.7
+  },
+  {
+   "set": "known",
+   "kind": "real",
+   "category": "mal_scripts",
+   "packages": 20,
+   "flagged": 20,
+   "flagged_pct": 100.0,
+   "primitive_flagged": 20,
+   "median_score": 0.0868,
+   "threshold": 0.5
+  },
+  {
+   "set": "new",
+   "kind": "invented",
+   "category": "eval_decode",
+   "packages": 20,
+   "flagged": 20,
+   "flagged_pct": 100.0,
+   "primitive_flagged": 20,
+   "median_score": 0.9,
+   "threshold": 0.5
+  },
+  {
+   "set": "new",
+   "kind": "invented",
+   "category": "net_host",
+   "packages": 20,
+   "flagged": 20,
+   "flagged_pct": 100.0,
+   "primitive_flagged": 20,
+   "median_score": 0.8274,
+   "threshold": 0.5
+  },
+  {
+   "set": "new",
+   "kind": "invented",
+   "category": "obfuscated_loader",
+   "packages": 20,
+   "flagged": 20,
+   "flagged_pct": 100.0,
+   "primitive_flagged": 20,
+   "median_score": 0.9163,
+   "threshold": 0.5
+  },
+  {
+   "set": "new",
+   "kind": "invented",
+   "category": "reverse_shell",
+   "packages": 20,
+   "flagged": 20,
+   "flagged_pct": 100.0,
+   "primitive_flagged": 20,
+   "median_score": 0.8413,
+   "threshold": 0.5
+  },
+  {
+   "set": "new",
+   "kind": "invented",
+   "category": "script_net_host",
+   "packages": 20,
+   "flagged": 20,
+   "flagged_pct": 100.0,
+   "primitive_flagged": 20,
+   "median_score": 0.7975,
+   "threshold": 0.5
+  },
+  {
+   "set": "new",
+   "kind": "real",
+   "category": "mal_encoded",
+   "packages": 20,
+   "flagged": 20,
+   "flagged_pct": 100.0,
+   "primitive_flagged": 19,
+   "median_score": 0.2633,
+   "threshold": 0.5
+  },
+  {
+   "set": "new",
+   "kind": "real",
+   "category": "mal_scripts",
+   "packages": 20,
+   "flagged": 20,
+   "flagged_pct": 100.0,
+   "primitive_flagged": 16,
+   "median_score": 0.0362,
+   "threshold": 0.5
+  },
+  {
+   "set": "new",
+   "kind": "real",
+   "category": "mal_shape",
+   "packages": 20,
+   "flagged": 20,
+   "flagged_pct": 100.0,
+   "primitive_flagged": 19,
+   "median_score": 0.0548,
+   "threshold": 0.5
+  },
+  {
+   "set": "new",
+   "kind": "real",
+   "category": "mal_stream",
+   "packages": 20,
+   "flagged": 20,
+   "flagged_pct": 100.0,
+   "primitive_flagged": 11,
+   "median_score": 0.0289,
+   "threshold": 0.5
+  }
+ ]
+}

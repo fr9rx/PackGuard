@@ -1,0 +1,322 @@
+{
+ "manifest": {
+  "rows": [
+   {
+    "set": "known",
+    "kind": "invented",
+    "category": "T1_format",
+    "packages": 530,
+    "primitive_flagged": 0
+   },
+   {
+    "set": "known",
+    "kind": "invented",
+    "category": "T2_rename",
+    "packages": 530,
+    "primitive_flagged": 0
+   },
+   {
+    "set": "known",
+    "kind": "invented",
+    "category": "T3_padding",
+    "packages": 530,
+    "primitive_flagged": 0
+   },
+   {
+    "set": "known",
+    "kind": "invented",
+    "category": "T4_base64",
+    "packages": 530,
+    "primitive_flagged": 0
+   },
+   {
+    "set": "known",
+    "kind": "invented",
+    "category": "dropper",
+    "packages": 600,
+    "primitive_flagged": 600
+   },
+   {
+    "set": "known",
+    "kind": "invented",
+    "category": "encoded_loader",
+    "packages": 600,
+    "primitive_flagged": 0
+   },
+   {
+    "set": "known",
+    "kind": "invented",
+    "category": "install_scripts",
+    "packages": 600,
+    "primitive_flagged": 600
+   },
+   {
+    "set": "known",
+    "kind": "invented",
+    "category": "multi_stage",
+    "packages": 600,
+    "primitive_flagged": 600
+   },
+   {
+    "set": "known",
+    "kind": "invented",
+    "category": "padded_loader",
+    "packages": 600,
+    "primitive_flagged": 600
+   },
+   {
+    "set": "known",
+    "kind": "invented",
+    "category": "payload_base64",
+    "packages": 265,
+    "primitive_flagged": 0
+   },
+   {
+    "set": "known",
+    "kind": "invented",
+    "category": "payload_hex",
+    "packages": 265,
+    "primitive_flagged": 0
+   },
+   {
+    "set": "known",
+    "kind": "invented",
+    "category": "stealer",
+    "packages": 600,
+    "primitive_flagged": 600
+   },
+   {
+    "set": "known",
+    "kind": "invented",
+    "category": "typosquat",
+    "packages": 600,
+    "primitive_flagged": 600
+   },
+   {
+    "set": "known",
+    "kind": "real",
+    "category": "mal_known",
+    "packages": 720,
+    "primitive_flagged": 476
+   },
+   {
+    "set": "known",
+    "kind": "real",
+    "category": "mal_newname",
+    "packages": 2500,
+    "primitive_flagged": 854
+   },
+   {
+    "set": "known",
+    "kind": "real",
+    "category": "mal_newver",
+    "packages": 500,
+    "primitive_flagged": 385
+   },
+   {
+    "set": "known",
+    "kind": "real",
+    "category": "mal_scripts",
+    "packages": 480,
+    "primitive_flagged": 428
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "credential_harvest",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "crypto_miner",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "discord_webhook",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "dns_beacon",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "env_dump",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "env_exec_net",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "eval_decode",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "hex_loader",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "net_host",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "net_sensitive",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "obfuscated",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "obfuscated_loader",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "reverse_shell",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "script_dependency_confusion",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "script_env_exfil",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "script_net_encoding",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "script_net_host",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "script_net_sensitive",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "script_reverse_shell",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "split_payload",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "stream_clone",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "telegram_bot",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "wallet_stealer",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "invented",
+    "category": "webhook_exec",
+    "packages": 300,
+    "primitive_flagged": 300
+   },
+   {
+    "set": "new",
+    "kind": "real",
+    "category": "mal_encoded",
+    "packages": 400,
+    "primitive_flagged": 329
+   },
+   {
+    "set": "new",
+    "kind": "real",
+    "category": "mal_scripts",
+    "packages": 300,
+    "primitive_flagged": 248
+   },
+   {
+    "set": "new",
+    "kind": "real",
+    "category": "mal_shape",
+    "packages": 285,
+    "primitive_flagged": 227
+   },
+   {
+    "set": "new",
+    "kind": "real",
+    "category": "mal_stream",
+    "packages": 900,
+    "primitive_flagged": 733
+   }
+  ],
+  "total": 20135
+ }
+}

@@ -204,6 +204,50 @@ Downloaded on 2026-11-05 on the VPS by `experiments/v7/scripts/fetch_benign_npm.
 | Filter | `.js`, `.cjs`, `.mjs` outside `node_modules`; files of 64 KiB or less, smallest first, at most 128 KiB per package; files identical to one already kept (whitespace ignored) are dropped (4,795); 201 packages had no JavaScript and 71 were left empty by the deduplication |
 | Use | `packguard -B <dir>`: a chunk only counts when it is closer to malware than to this set by the margin |
 
+## Combined malware reference set
+
+| | |
+|---|---|
+| Location | VPS only: `~/packguard-data/combined/malware_js/<package>@<version>/<file>`; manifest in `~/packguard-data/combined/malware_js_manifest.json`. Not committed (live malware). |
+| Built | 2026-11-06 by `experiments/v7/scripts/merge_malware_refs.py` from the extracted v1 and v2 sets, keeping a single copy of every file |
+| Size | 8,440 package folders, 23,444 files, 486 MiB; 54,298 identical files dropped, 699 of which differed only in whitespace |
+| Coverage | 91,639 distinct raw chunks and 19,213 normalised chunks, against 72,518 / 16,720 for v1 and 73,420 / 17,221 for v2 |
+| Use | One `packguard` run against both malware sets. A package whose files all duplicate an earlier one keeps no folder of its own, because its chunks are already in the set. |
+
+The benign control `accepts@1.3.8` scores 0.6193 against the combined set, the same as against v1 or v2 alone, so the deduplication changes no verdict. Load time is 19.4 s against 19.2 s for v1 alone.
+
+## Mode test sets: known and new
+
+Built 2026-11-06 on the GCE instance by `test-sets/scripts/run_server.sh`. These are the large mixed-provenance sets for the two stage-1 modes: each set contains downloaded packages (`real/`) and generated packages (`invented/`). Nothing is committed; generated sample folders are ignored by `test-sets/.gitignore`.
+
+| | |
+|---|---|
+| Location | GCE only: `~/pg-test-sets/known/{real,invented}/<category>/<package>@<version>/` and `~/pg-test-sets/new/{real,invented}/<category>/<package>@<version>/`. Manifests in `~/pg-test-sets/manifest_invented.json` and `manifest_real.json`; summaries in `stats.json` and `report_stats.json`. |
+| Size | 20,135 packages: known real 4,200, known invented 6,850, new real 1,885, new invented 7,200; about 391 MiB of plaintext plus a 215 MiB DataDog download cache |
+| Known categories | `mal_known` 720, `mal_newver` 500, `mal_newname` 2,500, `mal_scripts` 480, `T1_format`/`T2_rename`/`T3_padding`/`T4_base64` 530 each, `payload_base64`/`payload_hex` 265 each, and 600 each of `install_scripts`, `typosquat`, `dropper`, `stealer`, `padded_loader`, `encoded_loader`, `multi_stage` |
+| New categories | `mal_shape` 285, `mal_stream` 900, `mal_scripts` 300, `mal_encoded` 400, plus 300 each of `net_host`, `net_sensitive`, `webhook_exec`, `env_exec_net`, `eval_decode`, `obfuscated`, `stream_clone`, `reverse_shell`, `wallet_stealer`, `credential_harvest`, `dns_beacon`, `crypto_miner`, `telegram_bot`, `discord_webhook`, `env_dump`, `obfuscated_loader`, `split_payload`, `hex_loader`, `script_net_host`, `script_net_sensitive`, `script_net_encoding`, `script_reverse_shell`, `script_dependency_confusion`, `script_env_exfil` |
+| Real sources | The extracted v1/v2 corpora (`~/packguard-data/v1|v2/malware_js`) for `mal_known` and `mal_scripts`; a 6,500-zip DataDog `malicious_intent` download pool for `mal_newver`, `mal_newname` and the new set. The pool excludes every name already in v1/v2; a downloaded name whose code shape matches a v2 shape becomes `mal_newname`, the rest feed `mal_shape`, `mal_stream`, `mal_scripts` and `mal_encoded`. |
+| Invented sources | `T1`–`T4` and the payload folders are transforms of sampled v1/v2 packages; the remaining known folders and all 24 new folders are authored inert packages from `test-sets/scripts/generate_invented.py`. Every endpoint is under `.invalid`, every credential or wallet path is dummy, and no command is destructive or persistent. |
+| Validation sample | Known: T1–T4 10/10 each, `mal_known` 10/10, `mal_newname` 9/10, `mal_newver` 125/200, `mal_scripts` 20/20. New: `mal_shape`/`mal_stream`/`mal_scripts`/`mal_encoded` 20/20 each and the sampled invented categories 20/20 each. Reports are in `~/pg-test-sets/reports/`. |
+| Reproduce | `cd ~/packguard/test-sets/scripts && ./run_server.sh`, then `./scan_sets.sh known` or `./scan_sets.sh new`. `build_real.py --pack` writes encrypted per-category archives under `~/pg-test-sets/zips/` for safe copying. |
+
+`mal_newver` is the known-mode weak spot in the sample: a new version often moved its attack into an install script with a new endpoint, so the old version in the references no longer matches. The new mode's primitive channel is the path for them; run `--mode new` over the same packages. The authored packages in the known set are novel code too, so known mode may miss them; they mark the boundary between the two modes.
+
+### Local encrypted export
+
+On 2026-11-07 the four folders were packed on the instance into ZipCrypto archives (password `infected`) and copied to the Windows checkout under `data/from-instance/`. Each set is split into 16 zips by the first hex character of the package name; extract all 16 into one directory to reconstruct the flat set. The archives are well under GitHub's 100 MiB limit (largest 6.53 MiB). The manifests are `manifest_combined.json`, `manifest_benign.json`, `manifest_known.json` and `manifest_new.json` in the matching folders.
+
+| Folder | Zips | Size | Packages |
+|---|---:|---:|---:|
+| `data/from-instance/combined/` | 16 | 76.1 MiB | 8,440 |
+| `data/from-instance/benign/` | 16 | 27.1 MiB | 2,549 |
+| `data/from-instance/known/` | 16 | 33.1 MiB | 11,050 |
+| `data/from-instance/new/` | 16 | 12.2 MiB | 9,085 |
+
+Built by `test-sets/scripts/export_encrypted.py`. The combined, known and new archives contain live malware; extract them only on the instance or in WSL. The benign archive is ordinary npm code.
+
+On 2026-11-07 the instance copies under `~/pg-test-sets` and `~/packguard-data` were deleted after this export was verified, so the encrypted archives in `data/from-instance/` are now the only copy. The generators and the scan harness remain in `test-sets/scripts/`; rebuilding needs the v1/v2 zips in `data/` and a fresh benign reference download.
+
 ## Not yet collected
 
 - DataDog `compromised_lib` samples: real libraries with injected code, need a diff against the clean version.

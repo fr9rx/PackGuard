@@ -1,0 +1,136 @@
+{
+ "source": "/home/fr9rx/pg-test-sets/new/flat",
+ "prefix": "new",
+ "password": "infected",
+ "packages": 9085,
+ "archives": [
+  {
+   "zip": "new_0.zip",
+   "packages": 576,
+   "files": 1271,
+   "bytes": 742907,
+   "entries": 1271,
+   "first_entry_bytes": 65536
+  },
+  {
+   "zip": "new_1.zip",
+   "packages": 551,
+   "files": 1217,
+   "bytes": 749879,
+   "entries": 1217,
+   "first_entry_bytes": 24510
+  },
+  {
+   "zip": "new_2.zip",
+   "packages": 605,
+   "files": 1377,
+   "bytes": 828413,
+   "entries": 1377,
+   "first_entry_bytes": 2222
+  },
+  {
+   "zip": "new_3.zip",
+   "packages": 591,
+   "files": 1377,
+   "bytes": 862567,
+   "entries": 1377,
+   "first_entry_bytes": 65536
+  },
+  {
+   "zip": "new_4.zip",
+   "packages": 563,
+   "files": 1327,
+   "bytes": 822671,
+   "entries": 1327,
+   "first_entry_bytes": 2222
+  },
+  {
+   "zip": "new_5.zip",
+   "packages": 563,
+   "files": 1230,
+   "bytes": 693324,
+   "entries": 1230,
+   "first_entry_bytes": 2222
+  },
+  {
+   "zip": "new_6.zip",
+   "packages": 559,
+   "files": 1286,
+   "bytes": 821496,
+   "entries": 1286,
+   "first_entry_bytes": 12800
+  },
+  {
+   "zip": "new_7.zip",
+   "packages": 589,
+   "files": 1402,
+   "bytes": 911643,
+   "entries": 1402,
+   "first_entry_bytes": 2222
+  },
+  {
+   "zip": "new_8.zip",
+   "packages": 578,
+   "files": 1254,
+   "bytes": 743534,
+   "entries": 1254,
+   "first_entry_bytes": 65536
+  },
+  {
+   "zip": "new_9.zip",
+   "packages": 586,
+   "files": 1301,
+   "bytes": 763988,
+   "entries": 1301,
+   "first_entry_bytes": 2222
+  },
+  {
+   "zip": "new_a.zip",
+   "packages": 571,
+   "files": 1329,
+   "bytes": 911960,
+   "entries": 1329,
+   "first_entry_bytes": 24307
+  },
+  {
+   "zip": "new_b.zip",
+   "packages": 549,
+   "files": 1215,
+   "bytes": 766410,
+   "entries": 1215,
+   "first_entry_bytes": 29729
+  },
+  {
+   "zip": "new_c.zip",
+   "packages": 539,
+   "files": 1205,
+   "bytes": 766445,
+   "entries": 1205,
+   "first_entry_bytes": 29313
+  },
+  {
+   "zip": "new_d.zip",
+   "packages": 580,
+   "files": 1270,
+   "bytes": 855469,
+   "entries": 1270,
+   "first_entry_bytes": 2222
+  },
+  {
+   "zip": "new_e.zip",
+   "packages": 555,
+   "files": 1271,
+   "bytes": 802154,
+   "entries": 1271,
+   "first_entry_bytes": 2222
+  },
+  {
+   "zip": "new_f.zip",
+   "packages": 530,
+   "files": 1197,
+   "bytes": 736265,
+   "entries": 1197,
+   "first_entry_bytes": 2020
+  }
+ ]
+}
