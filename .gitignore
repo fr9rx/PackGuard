@@ -30,4 +30,4 @@ stage 2 LLM Model/*/onnx/
 .DS_Store
 Thumbs.db
 Desktop.ini
-serverpasskey.md
+docs/server.md

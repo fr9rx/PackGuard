@@ -96,7 +96,6 @@ Observation so far: every time the malware and benign reference sets grew, detec
 
 - Grow malware and benign references together. More malware references alone should raise false alarms; the benign set pulls them back down.
 - Watch for leakage: the larger the reference set, the more likely a test package or another version of it is also a reference.
-- Cost grows too: v1 already peaks at 1.74 GB with a 43 s load.
 - Data cannot fix a family that appears after the references were collected.
 
 ### Selection

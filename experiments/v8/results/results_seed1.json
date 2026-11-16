@@ -1,0 +1,733 @@
+{
+ "test": {
+  "test_seed": 20261114,
+  "categories": {
+   "known:mal_newname": 500,
+   "new:mal_shape": 225,
+   "new:mal_stream": 500,
+   "new:mal_scripts": 285,
+   "new:mal_encoded": 336
+  },
+  "benign": 600,
+  "dropped_for_leak": 186,
+  "missing_dirs": 4
+ },
+ "rows": [
+  {
+   "seed": 20261114,
+   "percent": 10,
+   "malware_folders": 861,
+   "malware_names": 514,
+   "benign_refs": 195,
+   "categories": {
+    "known_mal_newname": {
+     "expected": 500,
+     "reports": 500,
+     "flagged": 420,
+     "missing": 0,
+     "rate": 84.0,
+     "ci": [
+      80.52911368285649,
+      86.95241225704207
+     ]
+    },
+    "new_mal_shape": {
+     "expected": 225,
+     "reports": 225,
+     "flagged": 190,
+     "missing": 0,
+     "rate": 84.44444444444444,
+     "ci": [
+      79.13487550297747,
+      88.5975647526404
+     ]
+    },
+    "new_mal_stream": {
+     "expected": 500,
+     "reports": 500,
+     "flagged": 437,
+     "missing": 0,
+     "rate": 87.4,
+     "ci": [
+      84.20316422418121,
+      90.02651430970722
+     ]
+    },
+    "new_mal_scripts": {
+     "expected": 285,
+     "reports": 285,
+     "flagged": 245,
+     "missing": 0,
+     "rate": 85.96491228070175,
+     "ci": [
+      81.45227330382706,
+      89.52088291743748
+     ]
+    },
+    "new_mal_encoded": {
+     "expected": 336,
+     "reports": 336,
+     "flagged": 301,
+     "missing": 0,
+     "rate": 89.58333333333333,
+     "ci": [
+      85.85735326357346,
+      92.41440628558121
+     ]
+    }
+   },
+   "recall": 86.29469122426869,
+   "recall_ci": [
+    84.65030289332499,
+    87.78833185248244
+   ],
+   "malware_expected": 1846,
+   "malware_flagged": 1593,
+   "malware_missing": 0,
+   "benign": {
+    "expected": 600,
+    "reports": 600,
+    "flagged": 107,
+    "missing": 0,
+    "rate": 17.833333333333332,
+    "ci": [
+     14.977901229608518,
+     21.098049814506368
+    ]
+   },
+   "far": 17.833333333333332,
+   "far_ci": [
+    14.977901229608518,
+    21.098049814506368
+   ],
+   "seconds": 1290.0,
+   "failed_exit_1": 0
+  },
+  {
+   "seed": 20261114,
+   "percent": 25,
+   "malware_folders": 2134,
+   "malware_names": 1286,
+   "benign_refs": 487,
+   "categories": {
+    "known_mal_newname": {
+     "expected": 500,
+     "reports": 500,
+     "flagged": 427,
+     "missing": 0,
+     "rate": 85.4,
+     "ci": [
+      82.03500666587293,
+      88.22517034213911
+     ]
+    },
+    "new_mal_shape": {
+     "expected": 225,
+     "reports": 225,
+     "flagged": 200,
+     "missing": 0,
+     "rate": 88.88888888888889,
+     "ci": [
+      84.11220958952154,
+      92.3599003764986
+     ]
+    },
+    "new_mal_stream": {
+     "expected": 500,
+     "reports": 500,
+     "flagged": 485,
+     "missing": 0,
+     "rate": 97.0,
+     "ci": [
+      95.10959078150344,
+      98.17369507659166
+     ]
+    },
+    "new_mal_scripts": {
+     "expected": 285,
+     "reports": 285,
+     "flagged": 276,
+     "missing": 0,
+     "rate": 96.84210526315789,
+     "ci": [
+      94.10829724379865,
+      98.3299111029215
+     ]
+    },
+    "new_mal_encoded": {
+     "expected": 336,
+     "reports": 336,
+     "flagged": 307,
+     "missing": 0,
+     "rate": 91.36904761904762,
+     "ci": [
+      87.8793040498005,
+      93.92351232112054
+     ]
+    }
+   },
+   "recall": 91.8201516793066,
+   "recall_ci": [
+    90.48137898369085,
+    92.98522702192605
+   ],
+   "malware_expected": 1846,
+   "malware_flagged": 1695,
+   "malware_missing": 0,
+   "benign": {
+    "expected": 600,
+    "reports": 600,
+    "flagged": 83,
+    "missing": 0,
+    "rate": 13.833333333333334,
+    "ci": [
+     11.300057702447589,
+     16.826788808292978
+    ]
+   },
+   "far": 13.833333333333334,
+   "far_ci": [
+    11.300057702447589,
+    16.826788808292978
+   ],
+   "seconds": 1356.0,
+   "failed_exit_1": 0
+  },
+  {
+   "seed": 20261114,
+   "percent": 50,
+   "malware_folders": 4240,
+   "malware_names": 2571,
+   "benign_refs": 974,
+   "categories": {
+    "known_mal_newname": {
+     "expected": 500,
+     "reports": 500,
+     "flagged": 445,
+     "missing": 0,
+     "rate": 89.0,
+     "ci": [
+      85.9543814134072,
+      91.45089834118234
+     ]
+    },
+    "new_mal_shape": {
+     "expected": 225,
+     "reports": 225,
+     "flagged": 210,
+     "missing": 0,
+     "rate": 93.33333333333333,
+     "ci": [
+      89.29310905272959,
+      95.91867062369288
+     ]
+    },
+    "new_mal_stream": {
+     "expected": 500,
+     "reports": 500,
+     "flagged": 488,
+     "missing": 0,
+     "rate": 97.6,
+     "ci": [
+      95.85225403081019,
+      98.62188228504782
+     ]
+    },
+    "new_mal_scripts": {
+     "expected": 285,
+     "reports": 285,
+     "flagged": 278,
+     "missing": 0,
+     "rate": 97.54385964912281,
+     "ci": [
+      95.01777623849523,
+      98.80527418083496
+     ]
+    },
+    "new_mal_encoded": {
+     "expected": 336,
+     "reports": 336,
+     "flagged": 328,
+     "missing": 0,
+     "rate": 97.61904761904762,
+     "ci": [
+      95.37279862099635,
+      98.788716626107
+     ]
+    }
+   },
+   "recall": 94.7453954496208,
+   "recall_ci": [
+    93.63142918068807,
+    95.67351455071034
+   ],
+   "malware_expected": 1846,
+   "malware_flagged": 1749,
+   "malware_missing": 0,
+   "benign": {
+    "expected": 600,
+    "reports": 600,
+    "flagged": 74,
+    "missing": 0,
+    "rate": 12.333333333333334,
+    "ci": [
+     9.939320852716254,
+     15.206611458008949
+    ]
+   },
+   "far": 12.333333333333334,
+   "far_ci": [
+    9.939320852716254,
+    15.206611458008949
+   ],
+   "seconds": 1528.0,
+   "failed_exit_1": 0
+  },
+  {
+   "seed": 20261114,
+   "percent": 75,
+   "malware_folders": 6373,
+   "malware_names": 3856,
+   "benign_refs": 1462,
+   "categories": {
+    "known_mal_newname": {
+     "expected": 500,
+     "reports": 500,
+     "flagged": 464,
+     "missing": 0,
+     "rate": 92.8,
+     "ci": [
+      90.19310525910869,
+      94.75422739464601
+     ]
+    },
+    "new_mal_shape": {
+     "expected": 225,
+     "reports": 225,
+     "flagged": 213,
+     "missing": 0,
+     "rate": 94.66666666666667,
+     "ci": [
+      90.91053210597467,
+      96.92314848356848
+     ]
+    },
+    "new_mal_stream": {
+     "expected": 500,
+     "reports": 500,
+     "flagged": 489,
+     "missing": 0,
+     "rate": 97.8,
+     "ci": [
+      96.10387448516022,
+      98.76721198328542
+     ]
+    },
+    "new_mal_scripts": {
+     "expected": 285,
+     "reports": 285,
+     "flagged": 278,
+     "missing": 0,
+     "rate": 97.54385964912281,
+     "ci": [
+      95.01777623849523,
+      98.80527418083496
+     ]
+    },
+    "new_mal_encoded": {
+     "expected": 336,
+     "reports": 336,
+     "flagged": 333,
+     "missing": 0,
+     "rate": 99.10714285714286,
+     "ci": [
+      97.40816459728283,
+      99.6958980012925
+     ]
+    }
+   },
+   "recall": 96.26218851570964,
+   "recall_ci": [
+    95.2963713534358,
+    97.03585860614561
+   ],
+   "malware_expected": 1846,
+   "malware_flagged": 1777,
+   "malware_missing": 0,
+   "benign": {
+    "expected": 600,
+    "reports": 600,
+    "flagged": 80,
+    "missing": 0,
+    "rate": 13.333333333333334,
+    "ci": [
+     10.845210698671192,
+     16.287997745397586
+    ]
+   },
+   "far": 13.333333333333334,
+   "far_ci": [
+    10.845210698671192,
+    16.287997745397586
+   ],
+   "seconds": 1624.0,
+   "failed_exit_1": 0
+  },
+  {
+   "seed": 20261114,
+   "percent": 100,
+   "malware_folders": 8440,
+   "malware_names": 5142,
+   "benign_refs": 1949,
+   "categories": {
+    "known_mal_newname": {
+     "expected": 500,
+     "reports": 500,
+     "flagged": 481,
+     "missing": 0,
+     "rate": 96.2,
+     "ci": [
+      94.14147746007343,
+      97.55400778767108
+     ]
+    },
+    "new_mal_shape": {
+     "expected": 225,
+     "reports": 225,
+     "flagged": 218,
+     "missing": 0,
+     "rate": 96.88888888888889,
+     "ci": [
+      93.71853225782431,
+      98.48498318691999
+     ]
+    },
+    "new_mal_stream": {
+     "expected": 500,
+     "reports": 500,
+     "flagged": 494,
+     "missing": 0,
+     "rate": 98.8,
+     "ci": [
+      97.40692922810136,
+      99.44890800328247
+     ]
+    },
+    "new_mal_scripts": {
+     "expected": 285,
+     "reports": 285,
+     "flagged": 281,
+     "missing": 0,
+     "rate": 98.59649122807018,
+     "ci": [
+      96.44741949665814,
+      99.45289403158709
+     ]
+    },
+    "new_mal_encoded": {
+     "expected": 336,
+     "reports": 336,
+     "flagged": 336,
+     "missing": 0,
+     "rate": 100.0,
+     "ci": [
+      98.86959100945852,
+      99.99999999999997
+     ]
+    }
+   },
+   "recall": 98.0498374864572,
+   "recall_ci": [
+    97.31204442871703,
+    98.58805858550862
+   ],
+   "malware_expected": 1846,
+   "malware_flagged": 1810,
+   "malware_missing": 0,
+   "benign": {
+    "expected": 600,
+    "reports": 600,
+    "flagged": 69,
+    "missing": 0,
+    "rate": 11.5,
+    "ci": [
+     9.188599063642892,
+     14.301269802629326
+    ]
+   },
+   "far": 11.5,
+   "far_ci": [
+    9.188599063642892,
+    14.301269802629326
+   ],
+   "seconds": 1701.0,
+   "failed_exit_1": 0
+  }
+ ],
+ "aggregate": [
+  {
+   "percent": 10,
+   "seeds": [
+    20261114
+   ],
+   "n_seeds": 1,
+   "malware_folders": 861.0,
+   "malware_names": 514.0,
+   "benign_refs": 195.0,
+   "recall": {
+    "mean": 86.29469122426869,
+    "min": 86.29469122426869,
+    "max": 86.29469122426869
+   },
+   "categories": {
+    "known_mal_newname": {
+     "mean": 84.0,
+     "min": 84.0,
+     "max": 84.0
+    },
+    "new_mal_encoded": {
+     "mean": 89.58333333333333,
+     "min": 89.58333333333333,
+     "max": 89.58333333333333
+    },
+    "new_mal_scripts": {
+     "mean": 85.96491228070175,
+     "min": 85.96491228070175,
+     "max": 85.96491228070175
+    },
+    "new_mal_shape": {
+     "mean": 84.44444444444444,
+     "min": 84.44444444444444,
+     "max": 84.44444444444444
+    },
+    "new_mal_stream": {
+     "mean": 87.4,
+     "min": 87.4,
+     "max": 87.4
+    }
+   },
+   "far": {
+    "mean": 17.833333333333332,
+    "min": 17.833333333333332,
+    "max": 17.833333333333332
+   },
+   "first_seed_far_flagged": 107,
+   "first_seed_far_total": 600,
+   "scan_minutes": 21.5
+  },
+  {
+   "percent": 25,
+   "seeds": [
+    20261114
+   ],
+   "n_seeds": 1,
+   "malware_folders": 2134.0,
+   "malware_names": 1286.0,
+   "benign_refs": 487.0,
+   "recall": {
+    "mean": 91.8201516793066,
+    "min": 91.8201516793066,
+    "max": 91.8201516793066
+   },
+   "categories": {
+    "known_mal_newname": {
+     "mean": 85.4,
+     "min": 85.4,
+     "max": 85.4
+    },
+    "new_mal_encoded": {
+     "mean": 91.36904761904762,
+     "min": 91.36904761904762,
+     "max": 91.36904761904762
+    },
+    "new_mal_scripts": {
+     "mean": 96.84210526315789,
+     "min": 96.84210526315789,
+     "max": 96.84210526315789
+    },
+    "new_mal_shape": {
+     "mean": 88.88888888888889,
+     "min": 88.88888888888889,
+     "max": 88.88888888888889
+    },
+    "new_mal_stream": {
+     "mean": 97.0,
+     "min": 97.0,
+     "max": 97.0
+    }
+   },
+   "far": {
+    "mean": 13.833333333333334,
+    "min": 13.833333333333334,
+    "max": 13.833333333333334
+   },
+   "first_seed_far_flagged": 83,
+   "first_seed_far_total": 600,
+   "scan_minutes": 22.6
+  },
+  {
+   "percent": 50,
+   "seeds": [
+    20261114
+   ],
+   "n_seeds": 1,
+   "malware_folders": 4240.0,
+   "malware_names": 2571.0,
+   "benign_refs": 974.0,
+   "recall": {
+    "mean": 94.7453954496208,
+    "min": 94.7453954496208,
+    "max": 94.7453954496208
+   },
+   "categories": {
+    "known_mal_newname": {
+     "mean": 89.0,
+     "min": 89.0,
+     "max": 89.0
+    },
+    "new_mal_encoded": {
+     "mean": 97.61904761904762,
+     "min": 97.61904761904762,
+     "max": 97.61904761904762
+    },
+    "new_mal_scripts": {
+     "mean": 97.54385964912281,
+     "min": 97.54385964912281,
+     "max": 97.54385964912281
+    },
+    "new_mal_shape": {
+     "mean": 93.33333333333333,
+     "min": 93.33333333333333,
+     "max": 93.33333333333333
+    },
+    "new_mal_stream": {
+     "mean": 97.6,
+     "min": 97.6,
+     "max": 97.6
+    }
+   },
+   "far": {
+    "mean": 12.333333333333334,
+    "min": 12.333333333333334,
+    "max": 12.333333333333334
+   },
+   "first_seed_far_flagged": 74,
+   "first_seed_far_total": 600,
+   "scan_minutes": 25.466666666666665
+  },
+  {
+   "percent": 75,
+   "seeds": [
+    20261114
+   ],
+   "n_seeds": 1,
+   "malware_folders": 6373.0,
+   "malware_names": 3856.0,
+   "benign_refs": 1462.0,
+   "recall": {
+    "mean": 96.26218851570964,
+    "min": 96.26218851570964,
+    "max": 96.26218851570964
+   },
+   "categories": {
+    "known_mal_newname": {
+     "mean": 92.8,
+     "min": 92.8,
+     "max": 92.8
+    },
+    "new_mal_encoded": {
+     "mean": 99.10714285714286,
+     "min": 99.10714285714286,
+     "max": 99.10714285714286
+    },
+    "new_mal_scripts": {
+     "mean": 97.54385964912281,
+     "min": 97.54385964912281,
+     "max": 97.54385964912281
+    },
+    "new_mal_shape": {
+     "mean": 94.66666666666667,
+     "min": 94.66666666666667,
+     "max": 94.66666666666667
+    },
+    "new_mal_stream": {
+     "mean": 97.8,
+     "min": 97.8,
+     "max": 97.8
+    }
+   },
+   "far": {
+    "mean": 13.333333333333334,
+    "min": 13.333333333333334,
+    "max": 13.333333333333334
+   },
+   "first_seed_far_flagged": 80,
+   "first_seed_far_total": 600,
+   "scan_minutes": 27.066666666666666
+  },
+  {
+   "percent": 100,
+   "seeds": [
+    20261114
+   ],
+   "n_seeds": 1,
+   "malware_folders": 8440.0,
+   "malware_names": 5142.0,
+   "benign_refs": 1949.0,
+   "recall": {
+    "mean": 98.0498374864572,
+    "min": 98.0498374864572,
+    "max": 98.0498374864572
+   },
+   "categories": {
+    "known_mal_newname": {
+     "mean": 96.2,
+     "min": 96.2,
+     "max": 96.2
+    },
+    "new_mal_encoded": {
+     "mean": 100.0,
+     "min": 100.0,
+     "max": 100.0
+    },
+    "new_mal_scripts": {
+     "mean": 98.59649122807018,
+     "min": 98.59649122807018,
+     "max": 98.59649122807018
+    },
+    "new_mal_shape": {
+     "mean": 96.88888888888889,
+     "min": 96.88888888888889,
+     "max": 96.88888888888889
+    },
+    "new_mal_stream": {
+     "mean": 98.8,
+     "min": 98.8,
+     "max": 98.8
+    }
+   },
+   "far": {
+    "mean": 11.5,
+    "min": 11.5,
+    "max": 11.5
+   },
+   "first_seed_far_flagged": 69,
+   "first_seed_far_total": 600,
+   "scan_minutes": 28.35
+  }
+ ],
+ "incomplete": [
+  {
+   "seed": 20261115,
+   "percent": 10,
+   "lacking": [
+    "benign",
+    "known_mal_newname",
+    "new_mal_encoded",
+    "new_mal_scripts",
+    "new_mal_shape",
+    "new_mal_stream"
+   ]
+  }
+ ]
+}

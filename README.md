@@ -74,7 +74,6 @@ PackGuard/
 ├── docs/                       # Running guide, folder layout, design notes and suggestions
 ├── scripts/build-windows.ps1   # Native Windows build (zig + static liblzma)
 ├── Makefile                    # Linux/macOS build
-├── Dockerfile                  # Containerised scanner build
 └── README.md
 ```
 

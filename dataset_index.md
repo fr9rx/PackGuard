@@ -216,6 +216,40 @@ Downloaded on 2026-11-05 on the VPS by `experiments/v7/scripts/fetch_benign_npm.
 
 The benign control `accepts@1.3.8` scores 0.6193 against the combined set, the same as against v1 or v2 alone, so the deduplication changes no verdict. Load time is 19.4 s against 19.2 s for v1 alone.
 
+## v9 malware provider downloads
+
+Fetched 2026-11-15 on the VPS by `experiments/v9/scripts/fetch_datadog_all.py` and `fetch_providers.py`. Raw archives only, never extracted to disk outside the build; nothing is committed. The downloads were deleted from the VPS on 2026-11-16, so the locations below are where a new fetch would put them. `experiments/v9/providers.md` lists every provider examined and why each was used or skipped.
+
+| Provider | Location (VPS) | Archives indexed | Notes |
+|---|---|---:|---|
+| DataDog `malicious_intent` | `~/packguard-data/v9/raw/datadog` (5.6 GiB) | 24,855 | Individual files from `raw.githubusercontent.com`, zips of 20 MiB or less; `compromised_lib` left out |
+| NPMAnalysis | `~/packguard-data/v9/raw/npmanalysis` (1.9 GiB) | 6,419 | |
+| malicious-package-dataset | `~/packguard-data/v9/raw/malpkg` (3.6 GiB) | 18,673 of 19,061 | 4 unreadable; labels not independently verified |
+
+## v9 malware reference additions
+
+| | |
+|---|---|
+| Status | Removed from the VPS on 2026-11-16: the additions gave no recall gain and raised false alarms (`experiments/v9/results/`). The combined set of 8,440 folders stays the reference set. Only the manifest `~/packguard-data/v9/malware_manifest.json` remains; rebuilding needs a new fetch of the provider downloads and then `build_refs.py`. |
+| Built | 2026-11-15 by `experiments/v9/scripts/build_refs.py` (run with `python3 -I`) from the three provider downloads above |
+| Size | 1,604 new package folders (NPMAnalysis 1,072, malicious-package-dataset 396, DataDog 136), 1,238 package names, 21,321 files, 200 MiB. Merged with the combined set: 10,044 folders (+19%), 44,765 files, 686 MiB |
+| Quality filter | Of 49,947 archives, 42,856 pass: dropped when unreadable, nothing stored, a placeholder, a stub only, or under 256 bytes of code |
+| Leakage filter | 33,248 remain after dropping every package whose normalised name is in the known/new test sets or the learning-curve test set, and every exact test sample |
+| Deduplication | 5,841 identical to a package already in the combined set, 14,278 identical to another new package, 3,179 left with no new file once files already held (whitespace ignored) are removed, 301 over the 1 MiB JavaScript cap |
+| Ratio | At most 1 package per code shape (5,861 dropped) and 3 versions per name (1,749 dropped), the v2 ratio |
+| Removed after the build | `camo@99.0.2`, `camo@100.0.5`, `camo@101.0.5`: same name as the held-out benign test package `camo@0.12.5`. The manifest before the removal is `malware_manifest.before_camo.json` |
+| Ceiling | With 3 packages per shape the additions are 1,839; with no shape cap 3,151 (+37%). The open providers cannot double the set without near-duplicate references |
+
+## v9 benign reference additions
+
+| | |
+|---|---|
+| Status | Extracted folders removed from the VPS on 2026-11-16 together with the malware additions. The tarballs were deleted too; only the manifest `~/packguard-data/v9/benign_new_manifest.json` remains. |
+| Built | 2026-11-15 by `experiments/v9/scripts/fetch_benign_registry.py`, which reuses the v6 `build_benign.py` filters |
+| Size | 2,489 packages (1,259 popular, 1,230 long-tail), 23,571 files, 61.8 MiB of JavaScript |
+| Filter | Latest version only, published on or before 2026-08-15, with recorded monthly downloads and publish date; packages with no JavaScript skipped; files identical to one already kept dropped; no name shared with the existing benign references, the benign test packages or any malware reference |
+| Use | Was grown together with the malware references in the learning-curve points above 100% (`experiments/v9/scripts/build_growth_sets.py`) |
+
 ## Mode test sets: known and new
 
 Built 2026-11-06 on the GCE instance by `test-sets/scripts/run_server.sh`. These are the large mixed-provenance sets for the two stage-1 modes: each set contains downloaded packages (`real/`) and generated packages (`invented/`). Nothing is committed; generated sample folders are ignored by `test-sets/.gitignore`.
@@ -251,8 +285,8 @@ On 2026-11-07 the instance copies under `~/pg-test-sets` and `~/packguard-data` 
 ## Not yet collected
 
 - DataDog `compromised_lib` samples: real libraries with injected code, need a diff against the clean version.
-- The 1,635 DataDog zips over 1 MiB.
-- Backstabber's Knife Collection and MalwareBench: access on request.
+- Backstabber's Knife Collection and MalwareBench: access on request; how to ask is in `experiments/v9/providers.md`.
+- DataDog zips over 20 MiB, and npm-zoo (7 packages, doubtful labels).
 - MalOSS: the repository has package-name lists only; samples come from the authors.
 - OpenSSF malicious-packages: reports only, used to confirm live-scan detections.
 - A larger benign test set, including packages over 32 KiB. The v6 raw corpus (6,014 packages) and the v7 corpus (2,821 packages) feed the benign references, but the v4 benchmark still has only 58 benign packages per tier, so its false-alarm rate is a rough estimate.

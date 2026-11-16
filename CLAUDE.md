@@ -58,82 +58,13 @@ typedef struct {
   - no other mention of Claude as author, opener or contributor.
 - Commits use the repository owner's git identity only.
 
-# Server Access
+## Agnets Selection based on Jobs
 
-PackGuard runs on a private GCE instance in `europe-central2-c`. It has no external
-IP: SSH goes through IAP, which carries TCP only, and outbound internet comes from
-the Cloud NAT `packguard-nat-ec2`. The login user is `fr9rx` (passwordless sudo),
-not `root`.
+- Orchestartor (Fable 5.2): Plan a Feature, Auth and Payments, Secuirty Audit
+- Sonnet 5.5: Building a Feature, Write Tests
+- Opus 5.5: FrontEnd & UI, Nasty bug, Code Review
+- Haiku 5.5: Searching The Codebase, Renames and Boilerplate
 
-## Connect
+## Running Tests
 
-```bash
-gcloud compute ssh instance-20261106-103127 --zone=europe-central2-c --tunnel-through-iap
-```
-
-On Windows `gcloud compute ssh` always launches PuTTY, so `C:\apps\pg.cmd` wraps the
-same session in Windows OpenSSH inside Windows Terminal and starts an IAP tunnel on
-`localhost:2222` when one is not already up:
-
-```powershell
-pg
-pg ls -la
-```
-
-## Start and stop
-
-```bash
-gcloud compute instances start instance-20261106-103127 --zone=europe-central2-c
-gcloud compute instances stop instance-20261106-103127 --zone=europe-central2-c
-```
-
-## Copy files
-
-`gcloud compute scp` does not expand `~`, so pass absolute paths:
-
-```powershell
-gcloud compute scp --tunnel-through-iap --zone=europe-central2-c sample.tgz "instance-20261106-103127:/home/fr9rx/pg-scan/packages/"
-```
-
-## Where things are
-
-| Path | Contents |
-|---|---|
-| `~/packguard` | Sparse clone: `stage 2 LLM Model`, `experiments`, `data/v1`, `data/v2` |
-| `~/packguard/stage 2 LLM Model/v3/model_int8` | Stage 2 INT8 model, 258 MB, self-test 4/4 |
-| `~/packguard-data/v1/malware_js` | v1 malware, 5,904 packages, 39,119 files |
-| `~/packguard-data/v2/malware_js` | v2 malware, 6,500 packages, 38,623 files |
-| `~/packguard-data/combined/malware_js` | v1 and v2 merged, one copy per file, 23,444 files |
-| `~/packguard-data/v7/benign_refs` | Benign references, 2,549 packages |
-| `~/pg-scan/packages` | Drop folder for the packages to detect |
-| `~/pg-scan/reports` | Stage 1 JSON reports |
-
-`packguard` and `packguard-cli` come from release `v6.0.1` and are installed in
-`/usr/local/bin`. The v7 benign references were copied from the old VPS
-`153.75.226.130`, whose password is in `serverpasskey.md`.
-
-## Python
-
-System Python is 3.13 and its pip is externally managed, so Stage 2 runs from a venv:
-
-```bash
-~/pg-venv/bin/pip install numpy onnxruntime tokenizers
-export PATH=~/pg-venv/bin:$PATH
-~/pg-venv/bin/python "stage 2 LLM Model/v3/stage2_filter.py" --self-test
-```
-
-## Scan
-
-```bash
-packguard --mode known -B ~/packguard-data/v7/benign_refs \
-          -d ~/pg-scan/reports \
-          ~/packguard-data/combined/malware_js ~/pg-scan/packages/*
-```
-
-## Limits
-
-This account cannot add an external IP (`compute.subnetworks.useExternalIp`),
-reserve one (`compute.addresses.create`) or create firewall rules
-(`compute.firewalls.create`). The existing `default-allow-ssh` rule already opens
-`tcp:22`; mosh in Termius needs an external IP plus a rule for `udp:60000-61000`,
-and IAP cannot carry UDP, so mosh does not work on this instance as it stands.
+- Any test requested to be ran on the server by the user must be put it in its own tmux session
