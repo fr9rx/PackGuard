@@ -1,0 +1,13 @@
+# Exclude heavy binary checkpoints and local runtime caches from Git
+*.onnx
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.tar.gz
+__pycache__/
+*.pyc
+model_int8/
+checkpoints/
+.venv-stage2/
+*.log
