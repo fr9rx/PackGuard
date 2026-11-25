@@ -1,0 +1,40 @@
+{
+  "threshold": 0.945,
+  "target_specificity": 0.975,
+  "dev_val_onnx_cpu_metrics": {
+    "threshold": 0.945,
+    "roc_auc": 0.9765,
+    "recall": 0.87674,
+    "benign_specificity": 0.97585,
+    "fpr": 0.02415,
+    "precision": 0.96711,
+    "f1": 0.91971,
+    "tp": 441,
+    "fn": 62,
+    "tn": 606,
+    "fp": 15,
+    "benign_median_prob": 0.02466,
+    "malware_median_prob": 0.99994
+  },
+  "dev_val_onnx_at_0_50": {
+    "threshold": 0.5,
+    "roc_auc": 0.9765,
+    "recall": 0.93837,
+    "benign_specificity": 0.89372,
+    "fpr": 0.10628,
+    "precision": 0.87732,
+    "f1": 0.90682,
+    "tp": 472,
+    "fn": 31,
+    "tn": 555,
+    "fp": 66,
+    "benign_median_prob": 0.02466,
+    "malware_median_prob": 0.99994
+  },
+  "onnx_file": "packguard_v6_nano_int8.onnx",
+  "onnx_sha256": "0a0ed0783067b5386df88d94b234570a752bc2c420257b17d71aa18ab4970ae2",
+  "onnx_size_bytes": 13848054,
+  "onnx_size_mb": 13.207,
+  "fp32_size_mb": 52.143,
+  "dev_val_cpu_ms_per_pkg": 45.833
+}

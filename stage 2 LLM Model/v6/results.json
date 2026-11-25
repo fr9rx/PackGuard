@@ -1,0 +1,1019 @@
+{
+  "benchmark": "PackGuard Stage 2 v6 \u2014 Real Linux Sandbox Evaluation (100% Pure Neural ONNX)",
+  "timestamp_utc": "2026-11-24T20:17:56Z",
+  "model": {
+    "file": "packguard_v6_nano_int8.onnx",
+    "size_bytes": 13848054,
+    "size_mb": 13.207,
+    "sha256": "0a0ed0783067b5386df88d94b234570a752bc2c420257b17d71aa18ab4970ae2",
+    "providers": [
+      "CPUExecutionProvider"
+    ],
+    "tokenizer": "Real ModernBERT BPE (tokenizers Rust library)",
+    "rules_override": false,
+    "threshold": 0.945
+  },
+  "self_test_passed": true,
+  "overall": {
+    "threshold": 0.945,
+    "roc_auc": 0.97768,
+    "recall": 0.85905,
+    "benign_specificity": 0.96587,
+    "fpr": 0.03413,
+    "precision": 0.995,
+    "f1": 0.92204,
+    "tp": 17297,
+    "fn": 2838,
+    "tn": 2462,
+    "fp": 87,
+    "benign_median_prob": 0.04003,
+    "malware_median_prob": 0.99936
+  },
+  "sets": {
+    "benign": {
+      "total": 2549,
+      "false_alarms": 87,
+      "fpr_pct": 3.41,
+      "benign_specificity_pct": 96.59
+    },
+    "known": {
+      "total": 11050,
+      "flagged": 9510,
+      "recall_pct": 86.06
+    },
+    "new": {
+      "total": 9085,
+      "flagged": 7787,
+      "recall_pct": 85.71
+    }
+  },
+  "cpu_latency_ms": {
+    "median": 8.042,
+    "mean": 11.146,
+    "p95": 29.47,
+    "max": 49.888
+  },
+  "threshold_sweep": [
+    {
+      "threshold": 0.3,
+      "roc_auc": 0.97768,
+      "recall": 0.97869,
+      "benign_specificity": 0.80541,
+      "fpr": 0.19459,
+      "precision": 0.97545,
+      "f1": 0.97707,
+      "tp": 19706,
+      "fn": 429,
+      "tn": 2053,
+      "fp": 496,
+      "benign_median_prob": 0.04003,
+      "malware_median_prob": 0.99936
+    },
+    {
+      "threshold": 0.4,
+      "roc_auc": 0.97768,
+      "recall": 0.96995,
+      "benign_specificity": 0.83994,
+      "fpr": 0.16006,
+      "precision": 0.97954,
+      "f1": 0.97472,
+      "tp": 19530,
+      "fn": 605,
+      "tn": 2141,
+      "fp": 408,
+      "benign_median_prob": 0.04003,
+      "malware_median_prob": 0.99936
+    },
+    {
+      "threshold": 0.5,
+      "roc_auc": 0.97768,
+      "recall": 0.96096,
+      "benign_specificity": 0.86426,
+      "fpr": 0.13574,
+      "precision": 0.98243,
+      "f1": 0.97158,
+      "tp": 19349,
+      "fn": 786,
+      "tn": 2203,
+      "fp": 346,
+      "benign_median_prob": 0.04003,
+      "malware_median_prob": 0.99936
+    },
+    {
+      "threshold": 0.6,
+      "roc_auc": 0.97768,
+      "recall": 0.95093,
+      "benign_specificity": 0.88505,
+      "fpr": 0.11495,
+      "precision": 0.98493,
+      "f1": 0.96763,
+      "tp": 19147,
+      "fn": 988,
+      "tn": 2256,
+      "fp": 293,
+      "benign_median_prob": 0.04003,
+      "malware_median_prob": 0.99936
+    },
+    {
+      "threshold": 0.7,
+      "roc_auc": 0.97768,
+      "recall": 0.9327,
+      "benign_specificity": 0.90585,
+      "fpr": 0.09415,
+      "precision": 0.98738,
+      "f1": 0.95926,
+      "tp": 18780,
+      "fn": 1355,
+      "tn": 2309,
+      "fp": 240,
+      "benign_median_prob": 0.04003,
+      "malware_median_prob": 0.99936
+    },
+    {
+      "threshold": 0.8,
+      "roc_auc": 0.97768,
+      "recall": 0.91731,
+      "benign_specificity": 0.92389,
+      "fpr": 0.07611,
+      "precision": 0.98961,
+      "f1": 0.95209,
+      "tp": 18470,
+      "fn": 1665,
+      "tn": 2355,
+      "fp": 194,
+      "benign_median_prob": 0.04003,
+      "malware_median_prob": 0.99936
+    },
+    {
+      "threshold": 0.9,
+      "roc_auc": 0.97768,
+      "recall": 0.88711,
+      "benign_specificity": 0.95018,
+      "fpr": 0.04982,
+      "precision": 0.99294,
+      "f1": 0.93705,
+      "tp": 17862,
+      "fn": 2273,
+      "tn": 2422,
+      "fp": 127,
+      "benign_median_prob": 0.04003,
+      "malware_median_prob": 0.99936
+    },
+    {
+      "threshold": 0.945,
+      "roc_auc": 0.97768,
+      "recall": 0.85905,
+      "benign_specificity": 0.96587,
+      "fpr": 0.03413,
+      "precision": 0.995,
+      "f1": 0.92204,
+      "tp": 17297,
+      "fn": 2838,
+      "tn": 2462,
+      "fp": 87,
+      "benign_median_prob": 0.04003,
+      "malware_median_prob": 0.99936
+    }
+  ],
+  "per_category_recall": {
+    "known/encoded_loader": {
+      "total": 600,
+      "flagged": 7,
+      "recall_pct": 1.17
+    },
+    "new/split_payload": {
+      "total": 300,
+      "flagged": 16,
+      "recall_pct": 5.33
+    },
+    "new/eval_decode": {
+      "total": 300,
+      "flagged": 58,
+      "recall_pct": 19.33
+    },
+    "new/stream_clone": {
+      "total": 300,
+      "flagged": 113,
+      "recall_pct": 37.67
+    },
+    "known/T2_rename": {
+      "total": 530,
+      "flagged": 257,
+      "recall_pct": 48.49
+    },
+    "new/crypto_miner": {
+      "total": 300,
+      "flagged": 194,
+      "recall_pct": 64.67
+    },
+    "new/env_dump": {
+      "total": 300,
+      "flagged": 212,
+      "recall_pct": 70.67
+    },
+    "known/T1_format": {
+      "total": 530,
+      "flagged": 396,
+      "recall_pct": 74.72
+    },
+    "known/unmapped": {
+      "total": 4,
+      "flagged": 3,
+      "recall_pct": 75.0
+    },
+    "new/env_exec_net": {
+      "total": 300,
+      "flagged": 246,
+      "recall_pct": 82.0
+    },
+    "known/mal_known": {
+      "total": 717,
+      "flagged": 603,
+      "recall_pct": 84.1
+    },
+    "new/mal_stream": {
+      "total": 899,
+      "flagged": 759,
+      "recall_pct": 84.43
+    },
+    "known/mal_newver": {
+      "total": 498,
+      "flagged": 427,
+      "recall_pct": 85.74
+    },
+    "new/mal_shape": {
+      "total": 284,
+      "flagged": 245,
+      "recall_pct": 86.27
+    },
+    "new/mal_scripts": {
+      "total": 299,
+      "flagged": 258,
+      "recall_pct": 86.29
+    },
+    "new/obfuscated": {
+      "total": 300,
+      "flagged": 261,
+      "recall_pct": 87.0
+    },
+    "known/mal_newname": {
+      "total": 2501,
+      "flagged": 2210,
+      "recall_pct": 88.36
+    },
+    "known/mal_scripts": {
+      "total": 480,
+      "flagged": 428,
+      "recall_pct": 89.17
+    },
+    "new/telegram_bot": {
+      "total": 300,
+      "flagged": 269,
+      "recall_pct": 89.67
+    },
+    "new/script_net_encoding": {
+      "total": 300,
+      "flagged": 283,
+      "recall_pct": 94.33
+    },
+    "new/obfuscated_loader": {
+      "total": 300,
+      "flagged": 286,
+      "recall_pct": 95.33
+    },
+    "new/mal_encoded": {
+      "total": 400,
+      "flagged": 385,
+      "recall_pct": 96.25
+    },
+    "known/payload_base64": {
+      "total": 265,
+      "flagged": 256,
+      "recall_pct": 96.6
+    },
+    "known/multi_stage": {
+      "total": 600,
+      "flagged": 598,
+      "recall_pct": 99.67
+    },
+    "new/reverse_shell": {
+      "total": 300,
+      "flagged": 299,
+      "recall_pct": 99.67
+    },
+    "known/dropper": {
+      "total": 600,
+      "flagged": 600,
+      "recall_pct": 100.0
+    },
+    "known/install_scripts": {
+      "total": 600,
+      "flagged": 600,
+      "recall_pct": 100.0
+    },
+    "known/padded_loader": {
+      "total": 600,
+      "flagged": 600,
+      "recall_pct": 100.0
+    },
+    "known/payload_hex": {
+      "total": 265,
+      "flagged": 265,
+      "recall_pct": 100.0
+    },
+    "known/stealer": {
+      "total": 600,
+      "flagged": 600,
+      "recall_pct": 100.0
+    },
+    "known/T3_padding": {
+      "total": 530,
+      "flagged": 530,
+      "recall_pct": 100.0
+    },
+    "known/T4_base64": {
+      "total": 530,
+      "flagged": 530,
+      "recall_pct": 100.0
+    },
+    "known/typosquat": {
+      "total": 600,
+      "flagged": 600,
+      "recall_pct": 100.0
+    },
+    "new/unmapped": {
+      "total": 3,
+      "flagged": 3,
+      "recall_pct": 100.0
+    },
+    "new/credential_harvest": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/discord_webhook": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/dns_beacon": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/hex_loader": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/net_host": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/net_sensitive": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/script_dependency_confusion": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/script_env_exfil": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/script_net_host": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/script_net_sensitive": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/script_reverse_shell": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/wallet_stealer": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/webhook_exec": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    }
+  },
+  "sample_benign_false_positives": [
+    {
+      "package": "northern_albatross_amethyst-33@3.1.1",
+      "flagged": true,
+      "prob": 0.999968,
+      "chunks": 3,
+      "ms": 25.369
+    },
+    {
+      "package": "phone-cd@1.6.2",
+      "flagged": true,
+      "prob": 0.999892,
+      "chunks": 7,
+      "ms": 27.195
+    },
+    {
+      "package": "caller-path@4.0.0",
+      "flagged": true,
+      "prob": 0.999723,
+      "chunks": 1,
+      "ms": 28.378
+    },
+    {
+      "package": "controversial_kangaroo_pink-66@2.4.2",
+      "flagged": true,
+      "prob": 0.999646,
+      "chunks": 1,
+      "ms": 21.206
+    },
+    {
+      "package": "basictemplate@0.1.8",
+      "flagged": true,
+      "prob": 0.999489,
+      "chunks": 4,
+      "ms": 25.099
+    },
+    {
+      "package": "@solana_wallet-standard-chains@1.1.2",
+      "flagged": true,
+      "prob": 0.999383,
+      "chunks": 2,
+      "ms": 27.344
+    },
+    {
+      "package": "unescape-js@1.1.4",
+      "flagged": true,
+      "prob": 0.998883,
+      "chunks": 3,
+      "ms": 23.409
+    },
+    {
+      "package": "console-trace@0.2.1",
+      "flagged": true,
+      "prob": 0.99848,
+      "chunks": 2,
+      "ms": 21.206
+    },
+    {
+      "package": "@fingerprintjs_fingerprintjs@5.3.0",
+      "flagged": true,
+      "prob": 0.998476,
+      "chunks": 2,
+      "ms": 36.64
+    },
+    {
+      "package": "shync@0.4.0",
+      "flagged": true,
+      "prob": 0.998402,
+      "chunks": 2,
+      "ms": 21.56
+    },
+    {
+      "package": "enhanced-word-mcp-server@2.7.13",
+      "flagged": true,
+      "prob": 0.998384,
+      "chunks": 2,
+      "ms": 22.944
+    },
+    {
+      "package": "twilio-phone-verification@1.0.11",
+      "flagged": true,
+      "prob": 0.997962,
+      "chunks": 6,
+      "ms": 31.343
+    },
+    {
+      "package": "fs-safe@1.2.0",
+      "flagged": true,
+      "prob": 0.997944,
+      "chunks": 1,
+      "ms": 29.371
+    },
+    {
+      "package": "fastify-gcloud-trace@2.0.0",
+      "flagged": true,
+      "prob": 0.997369,
+      "chunks": 2,
+      "ms": 19.775
+    },
+    {
+      "package": "lint-fn@2.45.0",
+      "flagged": true,
+      "prob": 0.997304,
+      "chunks": 24,
+      "ms": 27.022
+    },
+    {
+      "package": "clean-regexp@1.0.0",
+      "flagged": true,
+      "prob": 0.997035,
+      "chunks": 2,
+      "ms": 29.971
+    },
+    {
+      "package": "word-width@1.0.1",
+      "flagged": true,
+      "prob": 0.996387,
+      "chunks": 7,
+      "ms": 28.096
+    },
+    {
+      "package": "quick-mongo-super@3.0.2",
+      "flagged": true,
+      "prob": 0.995274,
+      "chunks": 14,
+      "ms": 23.831
+    },
+    {
+      "package": "express-cluster-stability@3.0.1",
+      "flagged": true,
+      "prob": 0.994239,
+      "chunks": 8,
+      "ms": 30.472
+    },
+    {
+      "package": "@solana_accounts@8.6.0",
+      "flagged": true,
+      "prob": 0.992982,
+      "chunks": 5,
+      "ms": 27.344
+    },
+    {
+      "package": "morris.js.so@0.5.1",
+      "flagged": true,
+      "prob": 0.992687,
+      "chunks": 5,
+      "ms": 31.675
+    },
+    {
+      "package": "space-slug@2.1.0",
+      "flagged": true,
+      "prob": 0.991684,
+      "chunks": 2,
+      "ms": 29.47
+    },
+    {
+      "package": "@yarnpkg_parsers@3.1.0",
+      "flagged": true,
+      "prob": 0.991301,
+      "chunks": 6,
+      "ms": 36.468
+    },
+    {
+      "package": "bip39@3.1.2",
+      "flagged": true,
+      "prob": 0.990408,
+      "chunks": 2,
+      "ms": 29.284
+    },
+    {
+      "package": "systeminformation@5.33.19",
+      "flagged": true,
+      "prob": 0.989527,
+      "chunks": 11,
+      "ms": 31.501
+    },
+    {
+      "package": "spec-lite@3.2.0",
+      "flagged": true,
+      "prob": 0.989357,
+      "chunks": 10,
+      "ms": 29.47
+    },
+    {
+      "package": "ual-token-pocket@0.3.0",
+      "flagged": true,
+      "prob": 0.987406,
+      "chunks": 6,
+      "ms": 23.409
+    },
+    {
+      "package": "png-async@0.9.4",
+      "flagged": true,
+      "prob": 0.987323,
+      "chunks": 7,
+      "ms": 29.06
+    },
+    {
+      "package": "sails-hook-deep-orm@1.0.2",
+      "flagged": true,
+      "prob": 0.98729,
+      "chunks": 24,
+      "ms": 27.905
+    },
+    {
+      "package": "oauth-zero-legged@1.0.1",
+      "flagged": true,
+      "prob": 0.987071,
+      "chunks": 5,
+      "ms": 25.734
+    },
+    {
+      "package": "http-auth@4.2.1",
+      "flagged": true,
+      "prob": 0.986623,
+      "chunks": 5,
+      "ms": 28.164
+    },
+    {
+      "package": "eryn@0.3.2",
+      "flagged": true,
+      "prob": 0.986082,
+      "chunks": 6,
+      "ms": 28.527
+    },
+    {
+      "package": "@vscode_sudo-prompt@9.3.2",
+      "flagged": true,
+      "prob": 0.985739,
+      "chunks": 3,
+      "ms": 36.468
+    },
+    {
+      "package": "dsh-schedule@0.1.1",
+      "flagged": true,
+      "prob": 0.985711,
+      "chunks": 6,
+      "ms": 27.108
+    },
+    {
+      "package": "react-password-strengthbar-ui@2.1.2",
+      "flagged": true,
+      "prob": 0.985569,
+      "chunks": 12,
+      "ms": 31.623
+    },
+    {
+      "package": "tron-create-address@0.1.11",
+      "flagged": true,
+      "prob": 0.983858,
+      "chunks": 4,
+      "ms": 31.343
+    },
+    {
+      "package": "micromark-util-symbol@2.0.1",
+      "flagged": true,
+      "prob": 0.983838,
+      "chunks": 5,
+      "ms": 24.244
+    },
+    {
+      "package": "compose-spec-ts@0.4.0",
+      "flagged": true,
+      "prob": 0.982394,
+      "chunks": 1,
+      "ms": 21.206
+    },
+    {
+      "package": "react-native-dom-parser@1.5.3",
+      "flagged": true,
+      "prob": 0.981539,
+      "chunks": 5,
+      "ms": 25.328
+    },
+    {
+      "package": "wariguai@1.1.0",
+      "flagged": true,
+      "prob": 0.981434,
+      "chunks": 3,
+      "ms": 29.333
+    }
+  ],
+  "sample_malware_false_negatives": [
+    {
+      "package": "braze-cordova-sdk@0.0.0",
+      "flagged": false,
+      "prob": 0.0,
+      "chunks": 0,
+      "ms": 11.758,
+      "set": "known"
+    },
+    {
+      "package": "cdntodister@20.0.0",
+      "flagged": false,
+      "prob": 0.0,
+      "chunks": 0,
+      "ms": 12.972,
+      "set": "known"
+    },
+    {
+      "package": "pg-fixture-known-t1_format-0050@2.0.50",
+      "flagged": false,
+      "prob": 0.0,
+      "chunks": 0,
+      "ms": 12.901,
+      "set": "known"
+    },
+    {
+      "package": "pg-fixture-known-t2_rename-0050@2.0.50",
+      "flagged": false,
+      "prob": 0.0,
+      "chunks": 0,
+      "ms": 13.205,
+      "set": "known"
+    },
+    {
+      "package": "js-logger-pack@0.0.1",
+      "flagged": false,
+      "prob": 0.002131,
+      "chunks": 1,
+      "ms": 26.354,
+      "set": "known"
+    },
+    {
+      "package": "react-type-next@0.1.0",
+      "flagged": false,
+      "prob": 0.002178,
+      "chunks": 1,
+      "ms": 21.322,
+      "set": "new"
+    },
+    {
+      "package": "react-type-next@0.1.1",
+      "flagged": false,
+      "prob": 0.002178,
+      "chunks": 1,
+      "ms": 21.322,
+      "set": "new"
+    },
+    {
+      "package": "@row-components__pricing-embedded-sui@78.0.0",
+      "flagged": false,
+      "prob": 0.002428,
+      "chunks": 1,
+      "ms": 10.053,
+      "set": "new"
+    },
+    {
+      "package": "aries-bifold-root@2.0.0",
+      "flagged": false,
+      "prob": 0.002438,
+      "chunks": 1,
+      "ms": 15.079,
+      "set": "new"
+    },
+    {
+      "package": "db-connections-templates@1.0.0",
+      "flagged": false,
+      "prob": 0.002439,
+      "chunks": 1,
+      "ms": 12.778,
+      "set": "new"
+    },
+    {
+      "package": "baby-loris@1.0.3",
+      "flagged": false,
+      "prob": 0.002443,
+      "chunks": 1,
+      "ms": 8.135,
+      "set": "new"
+    },
+    {
+      "package": "@isv-occ-payment__occ-payment-service@77.77.78",
+      "flagged": false,
+      "prob": 0.002446,
+      "chunks": 1,
+      "ms": 20.933,
+      "set": "new"
+    },
+    {
+      "package": "artifact-registry-client@99.99.99",
+      "flagged": false,
+      "prob": 0.002447,
+      "chunks": 1,
+      "ms": 15.079,
+      "set": "new"
+    },
+    {
+      "package": "wrap.scrt.network@0.0.1",
+      "flagged": false,
+      "prob": 0.002447,
+      "chunks": 1,
+      "ms": 10.523,
+      "set": "new"
+    },
+    {
+      "package": "@kui-react__button@999.999.999",
+      "flagged": false,
+      "prob": 0.002448,
+      "chunks": 1,
+      "ms": 20.933,
+      "set": "new"
+    },
+    {
+      "package": "storj-satellite@1.0.0",
+      "flagged": false,
+      "prob": 0.002471,
+      "chunks": 1,
+      "ms": 14.384,
+      "set": "new"
+    },
+    {
+      "package": "camera-kit-react-native-example@1.0.7",
+      "flagged": false,
+      "prob": 0.002673,
+      "chunks": 1,
+      "ms": 14.27,
+      "set": "known"
+    },
+    {
+      "package": "npm-global-util@1.3.10",
+      "flagged": false,
+      "prob": 0.002765,
+      "chunks": 1,
+      "ms": 16.143,
+      "set": "known"
+    },
+    {
+      "package": "justgetit@1.1.2",
+      "flagged": false,
+      "prob": 0.002813,
+      "chunks": 1,
+      "ms": 25.854,
+      "set": "known"
+    },
+    {
+      "package": "justgetit@1.2.1",
+      "flagged": false,
+      "prob": 0.002813,
+      "chunks": 1,
+      "ms": 25.854,
+      "set": "known"
+    },
+    {
+      "package": "pg-fixture-known-t2_rename-0425@2.0.425",
+      "flagged": false,
+      "prob": 0.004855,
+      "chunks": 1,
+      "ms": 14.085,
+      "set": "known"
+    },
+    {
+      "package": "callsign-async-runner@2.0.1",
+      "flagged": false,
+      "prob": 0.00545,
+      "chunks": 1,
+      "ms": 14.27,
+      "set": "known"
+    },
+    {
+      "package": "pg-fixture-known-t1_format-0179@2.0.179",
+      "flagged": false,
+      "prob": 0.005849,
+      "chunks": 1,
+      "ms": 18.926,
+      "set": "known"
+    },
+    {
+      "package": "react-content-parser@5.9.22",
+      "flagged": false,
+      "prob": 0.00659,
+      "chunks": 16,
+      "ms": 17.306,
+      "set": "known"
+    },
+    {
+      "package": "tree-sitter-iec61131-3-st@0.1.0",
+      "flagged": false,
+      "prob": 0.006826,
+      "chunks": 4,
+      "ms": 19.204,
+      "set": "known"
+    },
+    {
+      "package": "tree-sitter-iec61131-3-st@0.1.2",
+      "flagged": false,
+      "prob": 0.006826,
+      "chunks": 4,
+      "ms": 19.204,
+      "set": "known"
+    },
+    {
+      "package": "pg-fixture-known-t1_format-0367@2.0.367",
+      "flagged": false,
+      "prob": 0.007019,
+      "chunks": 13,
+      "ms": 14.069,
+      "set": "known"
+    },
+    {
+      "package": "@wxi-dev_serverless-tsc-config@1.0.2",
+      "flagged": false,
+      "prob": 0.008735,
+      "chunks": 1,
+      "ms": 11.13,
+      "set": "known"
+    },
+    {
+      "package": "@wxi-dev_serverless-tsc-config@1.0.3",
+      "flagged": false,
+      "prob": 0.008735,
+      "chunks": 1,
+      "ms": 11.13,
+      "set": "known"
+    },
+    {
+      "package": "scoin_setting@1.0.16",
+      "flagged": false,
+      "prob": 0.009,
+      "chunks": 4,
+      "ms": 13.706,
+      "set": "known"
+    },
+    {
+      "package": "apple-app-store-server-library-poc@137.0.1",
+      "flagged": false,
+      "prob": 0.00928,
+      "chunks": 1,
+      "ms": 10.328,
+      "set": "known"
+    },
+    {
+      "package": "pg-fixture-known-t1_format-0261@2.0.261",
+      "flagged": false,
+      "prob": 0.009288,
+      "chunks": 1,
+      "ms": 13.943,
+      "set": "known"
+    },
+    {
+      "package": "aptos-protos@0.9.1",
+      "flagged": false,
+      "prob": 0.010062,
+      "chunks": 2,
+      "ms": 10.328,
+      "set": "known"
+    },
+    {
+      "package": "@wen-community__wen-new-standard@0.4.2",
+      "flagged": false,
+      "prob": 0.010403,
+      "chunks": 2,
+      "ms": 20.564,
+      "set": "known"
+    },
+    {
+      "package": "@custom-widget__sdk@0.1.0",
+      "flagged": false,
+      "prob": 0.010587,
+      "chunks": 2,
+      "ms": 9.697,
+      "set": "known"
+    },
+    {
+      "package": "pg-fixture-known-t1_format-0370@2.0.370",
+      "flagged": false,
+      "prob": 0.011154,
+      "chunks": 1,
+      "ms": 14.069,
+      "set": "known"
+    },
+    {
+      "package": "opaline@0.6.0",
+      "flagged": false,
+      "prob": 0.011345,
+      "chunks": 1,
+      "ms": 9.625,
+      "set": "known"
+    },
+    {
+      "package": "markdown-agent@2.13.0",
+      "flagged": false,
+      "prob": 0.011694,
+      "chunks": 1,
+      "ms": 15.051,
+      "set": "known"
+    },
+    {
+      "package": "extendmine@3.0.4",
+      "flagged": false,
+      "prob": 0.012138,
+      "chunks": 2,
+      "ms": 22.901,
+      "set": "known"
+    },
+    {
+      "package": "@supera_shared@1.0.12",
+      "flagged": false,
+      "prob": 0.012922,
+      "chunks": 8,
+      "ms": 28.448,
+      "set": "known"
+    }
+  ]
+}
