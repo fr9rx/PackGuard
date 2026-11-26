@@ -60,11 +60,14 @@ typedef struct {
 
 ## Agnets Selection based on Jobs
 
-- Orchestartor (Fable 5.2): Plan a Feature, Auth and Payments, Secuirty Audit
+- Orchestartor (Opus 5.5): Plan a Feature, Auth and Payments, Secuirty Audit, FrontEnd & UI, Nasty bug, Code Review
 - Sonnet 5.5: Building a Feature, Write Tests
-- Opus 5.5: FrontEnd & UI, Nasty bug, Code Review
 - Haiku 5.5: Searching The Codebase, Renames and Boilerplate
 
 ## Running Tests
 
 - Any test requested to be ran on the server by the user must be put it in its own tmux session
+
+## Constraint
+
+- dont add or remove files from stage 2 LLM Model under any conditions if you want to add docs add them in the docs folder in the rot of the repo
