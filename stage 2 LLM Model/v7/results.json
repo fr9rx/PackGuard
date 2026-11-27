@@ -1,0 +1,958 @@
+{
+  "benchmark": "PackGuard Stage 2 v7 \u2014 Real Linux Sandbox Evaluation (Pure Neural ONNX + Static AST Folder)",
+  "timestamp_utc": "2026-11-27T04:39:59Z",
+  "model": {
+    "file": "packguard_v7_int8.onnx",
+    "size_bytes": 41325323,
+    "size_mb": 39.411,
+    "sha256": "ae1a5dc4380e2e671bda44644e9e61f688319d8fa8966c1d3e758152c9e774fc",
+    "providers": [
+      "CPUExecutionProvider"
+    ],
+    "tokenizer": "Real ModernBERT BPE (tokenizers Rust library)",
+    "rules_override": false,
+    "mil_enabled": true,
+    "threshold": 0.5
+  },
+  "self_test_passed": true,
+  "zero_chunk_malware_count": 0,
+  "overall": {
+    "threshold": 0.5,
+    "roc_auc": 0.99131,
+    "recall": 0.92327,
+    "benign_specificity": 0.98902,
+    "fpr": 0.01098,
+    "precision": 0.9985,
+    "f1": 0.95941,
+    "tp": 18590,
+    "fn": 1545,
+    "tn": 2521,
+    "fp": 28,
+    "benign_median_prob": 0.00301,
+    "malware_median_prob": 0.96306
+  },
+  "sets": {
+    "benign": {
+      "total": 2549,
+      "false_alarms": 28,
+      "fpr_pct": 1.1,
+      "benign_specificity_pct": 98.9
+    },
+    "known": {
+      "total": 11050,
+      "flagged": 10150,
+      "recall_pct": 91.86
+    },
+    "new": {
+      "total": 9085,
+      "flagged": 8440,
+      "recall_pct": 92.9
+    }
+  },
+  "cpu_latency_ms": {
+    "median": 168.053,
+    "mean": 240.624,
+    "p95": 668.142,
+    "max": 1021.444
+  },
+  "threshold_sweep": [
+    {
+      "threshold": 0.3,
+      "roc_auc": 0.99131,
+      "recall": 0.95138,
+      "benign_specificity": 0.97411,
+      "fpr": 0.02589,
+      "precision": 0.99657,
+      "f1": 0.97345,
+      "tp": 19156,
+      "fn": 979,
+      "tn": 2483,
+      "fp": 66,
+      "benign_median_prob": 0.00301,
+      "malware_median_prob": 0.96306
+    },
+    {
+      "threshold": 0.4,
+      "roc_auc": 0.99131,
+      "recall": 0.9336,
+      "benign_specificity": 0.98195,
+      "fpr": 0.01805,
+      "precision": 0.99756,
+      "f1": 0.96452,
+      "tp": 18798,
+      "fn": 1337,
+      "tn": 2503,
+      "fp": 46,
+      "benign_median_prob": 0.00301,
+      "malware_median_prob": 0.96306
+    },
+    {
+      "threshold": 0.5,
+      "roc_auc": 0.99131,
+      "recall": 0.92327,
+      "benign_specificity": 0.98902,
+      "fpr": 0.01098,
+      "precision": 0.9985,
+      "f1": 0.95941,
+      "tp": 18590,
+      "fn": 1545,
+      "tn": 2521,
+      "fp": 28,
+      "benign_median_prob": 0.00301,
+      "malware_median_prob": 0.96306
+    },
+    {
+      "threshold": 0.62,
+      "roc_auc": 0.99131,
+      "recall": 0.90598,
+      "benign_specificity": 0.99333,
+      "fpr": 0.00667,
+      "precision": 0.99907,
+      "f1": 0.95025,
+      "tp": 18242,
+      "fn": 1893,
+      "tn": 2532,
+      "fp": 17,
+      "benign_median_prob": 0.00301,
+      "malware_median_prob": 0.96306
+    },
+    {
+      "threshold": 0.7,
+      "roc_auc": 0.99131,
+      "recall": 0.88329,
+      "benign_specificity": 0.99529,
+      "fpr": 0.00471,
+      "precision": 0.99933,
+      "f1": 0.93773,
+      "tp": 17785,
+      "fn": 2350,
+      "tn": 2537,
+      "fp": 12,
+      "benign_median_prob": 0.00301,
+      "malware_median_prob": 0.96306
+    },
+    {
+      "threshold": 0.8,
+      "roc_auc": 0.99131,
+      "recall": 0.82026,
+      "benign_specificity": 0.99725,
+      "fpr": 0.00275,
+      "precision": 0.99958,
+      "f1": 0.90109,
+      "tp": 16516,
+      "fn": 3619,
+      "tn": 2542,
+      "fp": 7,
+      "benign_median_prob": 0.00301,
+      "malware_median_prob": 0.96306
+    },
+    {
+      "threshold": 0.9,
+      "roc_auc": 0.99131,
+      "recall": 0.69565,
+      "benign_specificity": 0.99804,
+      "fpr": 0.00196,
+      "precision": 0.99964,
+      "f1": 0.82039,
+      "tp": 14007,
+      "fn": 6128,
+      "tn": 2544,
+      "fp": 5,
+      "benign_median_prob": 0.00301,
+      "malware_median_prob": 0.96306
+    },
+    {
+      "threshold": 0.95,
+      "roc_auc": 0.99131,
+      "recall": 0.56201,
+      "benign_specificity": 0.99922,
+      "fpr": 0.00078,
+      "precision": 0.99982,
+      "f1": 0.71955,
+      "tp": 11316,
+      "fn": 8819,
+      "tn": 2547,
+      "fp": 2,
+      "benign_median_prob": 0.00301,
+      "malware_median_prob": 0.96306
+    },
+    {
+      "threshold": 0.5,
+      "roc_auc": 0.99131,
+      "recall": 0.92327,
+      "benign_specificity": 0.98902,
+      "fpr": 0.01098,
+      "precision": 0.9985,
+      "f1": 0.95941,
+      "tp": 18590,
+      "fn": 1545,
+      "tn": 2521,
+      "fp": 28,
+      "benign_median_prob": 0.00301,
+      "malware_median_prob": 0.96306
+    }
+  ],
+  "per_category_recall": {
+    "known/T3_padding": {
+      "total": 530,
+      "flagged": 270,
+      "recall_pct": 50.94
+    },
+    "new/stream_clone": {
+      "total": 300,
+      "flagged": 167,
+      "recall_pct": 55.67
+    },
+    "new/mal_encoded": {
+      "total": 400,
+      "flagged": 267,
+      "recall_pct": 66.75
+    },
+    "new/mal_shape": {
+      "total": 284,
+      "flagged": 215,
+      "recall_pct": 75.7
+    },
+    "known/T1_format": {
+      "total": 530,
+      "flagged": 414,
+      "recall_pct": 78.11
+    },
+    "known/mal_newver": {
+      "total": 498,
+      "flagged": 391,
+      "recall_pct": 78.51
+    },
+    "new/mal_scripts": {
+      "total": 299,
+      "flagged": 235,
+      "recall_pct": 78.6
+    },
+    "new/mal_stream": {
+      "total": 899,
+      "flagged": 731,
+      "recall_pct": 81.31
+    },
+    "known/mal_known": {
+      "total": 717,
+      "flagged": 606,
+      "recall_pct": 84.52
+    },
+    "known/mal_scripts": {
+      "total": 480,
+      "flagged": 419,
+      "recall_pct": 87.29
+    },
+    "new/dns_beacon": {
+      "total": 300,
+      "flagged": 269,
+      "recall_pct": 89.67
+    },
+    "new/env_dump": {
+      "total": 300,
+      "flagged": 269,
+      "recall_pct": 89.67
+    },
+    "known/mal_newname": {
+      "total": 2501,
+      "flagged": 2289,
+      "recall_pct": 91.52
+    },
+    "known/T2_rename": {
+      "total": 530,
+      "flagged": 498,
+      "recall_pct": 93.96
+    },
+    "new/webhook_exec": {
+      "total": 300,
+      "flagged": 284,
+      "recall_pct": 94.67
+    },
+    "known/payload_base64": {
+      "total": 265,
+      "flagged": 264,
+      "recall_pct": 99.62
+    },
+    "known/unmapped": {
+      "total": 4,
+      "flagged": 4,
+      "recall_pct": 100.0
+    },
+    "known/dropper": {
+      "total": 600,
+      "flagged": 600,
+      "recall_pct": 100.0
+    },
+    "known/encoded_loader": {
+      "total": 600,
+      "flagged": 600,
+      "recall_pct": 100.0
+    },
+    "known/install_scripts": {
+      "total": 600,
+      "flagged": 600,
+      "recall_pct": 100.0
+    },
+    "known/multi_stage": {
+      "total": 600,
+      "flagged": 600,
+      "recall_pct": 100.0
+    },
+    "known/padded_loader": {
+      "total": 600,
+      "flagged": 600,
+      "recall_pct": 100.0
+    },
+    "known/payload_hex": {
+      "total": 265,
+      "flagged": 265,
+      "recall_pct": 100.0
+    },
+    "known/stealer": {
+      "total": 600,
+      "flagged": 600,
+      "recall_pct": 100.0
+    },
+    "known/T4_base64": {
+      "total": 530,
+      "flagged": 530,
+      "recall_pct": 100.0
+    },
+    "known/typosquat": {
+      "total": 600,
+      "flagged": 600,
+      "recall_pct": 100.0
+    },
+    "new/unmapped": {
+      "total": 3,
+      "flagged": 3,
+      "recall_pct": 100.0
+    },
+    "new/credential_harvest": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/crypto_miner": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/discord_webhook": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/env_exec_net": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/eval_decode": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/hex_loader": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/net_host": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/net_sensitive": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/obfuscated": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/obfuscated_loader": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/reverse_shell": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/script_dependency_confusion": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/script_env_exfil": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/script_net_encoding": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/script_net_host": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/script_net_sensitive": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/script_reverse_shell": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/split_payload": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/telegram_bot": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    },
+    "new/wallet_stealer": {
+      "total": 300,
+      "flagged": 300,
+      "recall_pct": 100.0
+    }
+  },
+  "sample_benign_false_positives": [
+    {
+      "package": "decode-jwt@1.0.2",
+      "flagged": true,
+      "prob": 0.960685,
+      "chunks": 1,
+      "ms": 519.697
+    },
+    {
+      "package": "controversial_kangaroo_pink-66@2.4.2",
+      "flagged": true,
+      "prob": 0.957974,
+      "chunks": 1,
+      "ms": 381.385
+    },
+    {
+      "package": "enhanced-word-mcp-server@2.7.13",
+      "flagged": true,
+      "prob": 0.935355,
+      "chunks": 2,
+      "ms": 680.591
+    },
+    {
+      "package": "shell-history@2.0.1",
+      "flagged": true,
+      "prob": 0.933208,
+      "chunks": 1,
+      "ms": 478.756
+    },
+    {
+      "package": "your-installer-package@1.0.8",
+      "flagged": true,
+      "prob": 0.918742,
+      "chunks": 1,
+      "ms": 331.87
+    },
+    {
+      "package": "northern_albatross_amethyst-33@3.1.1",
+      "flagged": true,
+      "prob": 0.857353,
+      "chunks": 3,
+      "ms": 635.164
+    },
+    {
+      "package": "subordinate@5.0.1",
+      "flagged": true,
+      "prob": 0.835048,
+      "chunks": 24,
+      "ms": 559.34
+    },
+    {
+      "package": "express-winston@4.2.0",
+      "flagged": true,
+      "prob": 0.786059,
+      "chunks": 1,
+      "ms": 361.459
+    },
+    {
+      "package": "dev-ip@1.0.1",
+      "flagged": true,
+      "prob": 0.782791,
+      "chunks": 6,
+      "ms": 583.212
+    },
+    {
+      "package": "launch-pack-core@1.16.10",
+      "flagged": true,
+      "prob": 0.741613,
+      "chunks": 7,
+      "ms": 599.256
+    },
+    {
+      "package": "systeminformation@5.33.19",
+      "flagged": true,
+      "prob": 0.731504,
+      "chunks": 11,
+      "ms": 663.012
+    },
+    {
+      "package": "neko-database@2.0.1",
+      "flagged": true,
+      "prob": 0.712938,
+      "chunks": 2,
+      "ms": 693.336
+    },
+    {
+      "package": "spec-lite@3.2.0",
+      "flagged": true,
+      "prob": 0.693189,
+      "chunks": 10,
+      "ms": 699.378
+    },
+    {
+      "package": "pigpio-client@1.5.3",
+      "flagged": true,
+      "prob": 0.6748,
+      "chunks": 7,
+      "ms": 576.484
+    },
+    {
+      "package": "hawk@9.0.2",
+      "flagged": true,
+      "prob": 0.646407,
+      "chunks": 5,
+      "ms": 693.676
+    },
+    {
+      "package": "@vscode_sudo-prompt@9.3.2",
+      "flagged": true,
+      "prob": 0.628424,
+      "chunks": 3,
+      "ms": 687.452
+    },
+    {
+      "package": "mitem@1.0.10",
+      "flagged": true,
+      "prob": 0.622537,
+      "chunks": 6,
+      "ms": 591.289
+    },
+    {
+      "package": "fs-extended-attributes@1.0.1",
+      "flagged": true,
+      "prob": 0.589171,
+      "chunks": 4,
+      "ms": 596.108
+    },
+    {
+      "package": "emoji-cz@0.3.1",
+      "flagged": true,
+      "prob": 0.584086,
+      "chunks": 3,
+      "ms": 321.026
+    },
+    {
+      "package": "ethereumjs-util@7.1.5",
+      "flagged": true,
+      "prob": 0.578014,
+      "chunks": 23,
+      "ms": 583.028
+    },
+    {
+      "package": "log4js@6.9.1",
+      "flagged": true,
+      "prob": 0.575218,
+      "chunks": 24,
+      "ms": 509.872
+    },
+    {
+      "package": "publish-please@5.5.2",
+      "flagged": true,
+      "prob": 0.564866,
+      "chunks": 24,
+      "ms": 658.779
+    },
+    {
+      "package": "@hapi_hapi@21.4.13",
+      "flagged": true,
+      "prob": 0.56281,
+      "chunks": 16,
+      "ms": 474.175
+    },
+    {
+      "package": "temp-mail-io@0.0.11",
+      "flagged": true,
+      "prob": 0.529477,
+      "chunks": 2,
+      "ms": 663.012
+    },
+    {
+      "package": "@calcom_embed-core@1.5.3",
+      "flagged": true,
+      "prob": 0.522976,
+      "chunks": 1,
+      "ms": 649.932
+    },
+    {
+      "package": "js-calendar-converter@0.0.7",
+      "flagged": true,
+      "prob": 0.51996,
+      "chunks": 8,
+      "ms": 722.28
+    },
+    {
+      "package": "@tailwindcss_line-clamp@0.4.4",
+      "flagged": true,
+      "prob": 0.517004,
+      "chunks": 3,
+      "ms": 645.857
+    },
+    {
+      "package": "downloadjs@1.4.7",
+      "flagged": true,
+      "prob": 0.514253,
+      "chunks": 2,
+      "ms": 686.397
+    }
+  ],
+  "sample_malware_false_negatives": [
+    {
+      "package": "pg-fixture-known-t1_format-0050@2.0.50",
+      "flagged": false,
+      "prob": 0.000993,
+      "chunks": 1,
+      "ms": 283.575,
+      "set": "known"
+    },
+    {
+      "package": "tree-sitter-iec61131-3-st@0.1.2",
+      "flagged": false,
+      "prob": 0.001012,
+      "chunks": 4,
+      "ms": 374.598,
+      "set": "known"
+    },
+    {
+      "package": "pg-fixture-known-t2_rename-0050@2.0.50",
+      "flagged": false,
+      "prob": 0.001023,
+      "chunks": 1,
+      "ms": 260.777,
+      "set": "known"
+    },
+    {
+      "package": "cdntodister@20.0.0",
+      "flagged": false,
+      "prob": 0.001057,
+      "chunks": 1,
+      "ms": 202.109,
+      "set": "known"
+    },
+    {
+      "package": "react-native-scrollpageviewtest@1.5.7",
+      "flagged": false,
+      "prob": 0.001115,
+      "chunks": 14,
+      "ms": 647.572,
+      "set": "known"
+    },
+    {
+      "package": "tree-sitter-iec61131-3-st@0.1.0",
+      "flagged": false,
+      "prob": 0.001255,
+      "chunks": 4,
+      "ms": 374.598,
+      "set": "known"
+    },
+    {
+      "package": "react-type-next@0.1.0",
+      "flagged": false,
+      "prob": 0.001301,
+      "chunks": 1,
+      "ms": 407.004,
+      "set": "new"
+    },
+    {
+      "package": "react-type-next@0.1.1",
+      "flagged": false,
+      "prob": 0.001301,
+      "chunks": 1,
+      "ms": 407.004,
+      "set": "new"
+    },
+    {
+      "package": "braze-cordova-sdk@0.0.0",
+      "flagged": false,
+      "prob": 0.001403,
+      "chunks": 1,
+      "ms": 220.203,
+      "set": "known"
+    },
+    {
+      "package": "xdater@6.1.9",
+      "flagged": false,
+      "prob": 0.001423,
+      "chunks": 3,
+      "ms": 328.215,
+      "set": "known"
+    },
+    {
+      "package": "fezbox@1.1.0",
+      "flagged": false,
+      "prob": 0.001451,
+      "chunks": 20,
+      "ms": 315.858,
+      "set": "known"
+    },
+    {
+      "package": "@toptal__picasso-slider@4.1.5",
+      "flagged": false,
+      "prob": 0.001516,
+      "chunks": 14,
+      "ms": 414.838,
+      "set": "new"
+    },
+    {
+      "package": "pg-fixture-known-t1_format-0315@2.0.315",
+      "flagged": false,
+      "prob": 0.001529,
+      "chunks": 13,
+      "ms": 369.966,
+      "set": "known"
+    },
+    {
+      "package": "pg-fixture-known-t1_format-0088@2.0.88",
+      "flagged": false,
+      "prob": 0.001562,
+      "chunks": 21,
+      "ms": 376.258,
+      "set": "known"
+    },
+    {
+      "package": "n8n-nodes-gasdhgfuy-rejerw-ytjsadx@0.0.60",
+      "flagged": false,
+      "prob": 0.001613,
+      "chunks": 10,
+      "ms": 647.704,
+      "set": "known"
+    },
+    {
+      "package": "n8n-nodes-gasdhgfuy-rejerw-ytjsadx@0.0.63",
+      "flagged": false,
+      "prob": 0.001613,
+      "chunks": 10,
+      "ms": 647.704,
+      "set": "known"
+    },
+    {
+      "package": "vue2-script-ext-html-webpack-plugin@2.1.10",
+      "flagged": false,
+      "prob": 0.001614,
+      "chunks": 10,
+      "ms": 265.564,
+      "set": "known"
+    },
+    {
+      "package": "@toptal__picasso-calendar@5.0.0",
+      "flagged": false,
+      "prob": 0.001632,
+      "chunks": 21,
+      "ms": 424.531,
+      "set": "known"
+    },
+    {
+      "package": "@toptal__picasso-calendar@4.1.6",
+      "flagged": false,
+      "prob": 0.001633,
+      "chunks": 21,
+      "ms": 424.531,
+      "set": "known"
+    },
+    {
+      "package": "@toptal__picasso-calendar@4.1.10",
+      "flagged": false,
+      "prob": 0.001635,
+      "chunks": 21,
+      "ms": 424.531,
+      "set": "known"
+    },
+    {
+      "package": "@pluxee-design-system__core@23.9897.9889",
+      "flagged": false,
+      "prob": 0.001636,
+      "chunks": 19,
+      "ms": 386.589,
+      "set": "new"
+    },
+    {
+      "package": "n8n-nodes-gasdhgfuy-rejerw-ytjsadx@0.0.93",
+      "flagged": false,
+      "prob": 0.001664,
+      "chunks": 9,
+      "ms": 647.704,
+      "set": "known"
+    },
+    {
+      "package": "marked-ps@2.6.0",
+      "flagged": false,
+      "prob": 0.001667,
+      "chunks": 4,
+      "ms": 277.279,
+      "set": "known"
+    },
+    {
+      "package": "n8n-nodes-gasdhgfuy-rejerw-ytjsadx@0.0.85",
+      "flagged": false,
+      "prob": 0.001695,
+      "chunks": 9,
+      "ms": 647.704,
+      "set": "known"
+    },
+    {
+      "package": "pg-fixture-known-t1_format-0355@2.0.355",
+      "flagged": false,
+      "prob": 0.001729,
+      "chunks": 22,
+      "ms": 328.148,
+      "set": "known"
+    },
+    {
+      "package": "pg-fixture-known-t1_format-0213@2.0.213",
+      "flagged": false,
+      "prob": 0.001817,
+      "chunks": 23,
+      "ms": 566.008,
+      "set": "known"
+    },
+    {
+      "package": "js-logger-pack@0.0.1",
+      "flagged": false,
+      "prob": 0.001864,
+      "chunks": 1,
+      "ms": 378.226,
+      "set": "known"
+    },
+    {
+      "package": "@supera_shared@1.0.12",
+      "flagged": false,
+      "prob": 0.001871,
+      "chunks": 8,
+      "ms": 473.22,
+      "set": "known"
+    },
+    {
+      "package": "forge-jsx@1.0.11",
+      "flagged": false,
+      "prob": 0.001886,
+      "chunks": 13,
+      "ms": 410.947,
+      "set": "known"
+    },
+    {
+      "package": "vite-logging-tool@1.0.2",
+      "flagged": false,
+      "prob": 0.001912,
+      "chunks": 6,
+      "ms": 391.696,
+      "set": "known"
+    },
+    {
+      "package": "cloud-binary@2.7.2",
+      "flagged": false,
+      "prob": 0.001928,
+      "chunks": 8,
+      "ms": 371.039,
+      "set": "known"
+    },
+    {
+      "package": "cloudmedia@2.7.3",
+      "flagged": false,
+      "prob": 0.001933,
+      "chunks": 8,
+      "ms": 219.316,
+      "set": "known"
+    },
+    {
+      "package": "scoin_setting@1.0.16",
+      "flagged": false,
+      "prob": 0.001972,
+      "chunks": 4,
+      "ms": 368.209,
+      "set": "known"
+    },
+    {
+      "package": "pg-fixture-known-t1_format-0095@2.0.95",
+      "flagged": false,
+      "prob": 0.002013,
+      "chunks": 13,
+      "ms": 383.689,
+      "set": "known"
+    },
+    {
+      "package": "index-ulid@3.0.3",
+      "flagged": false,
+      "prob": 0.002022,
+      "chunks": 5,
+      "ms": 551.195,
+      "set": "known"
+    },
+    {
+      "package": "index-ulid@3.0.4",
+      "flagged": false,
+      "prob": 0.002022,
+      "chunks": 5,
+      "ms": 551.195,
+      "set": "known"
+    },
+    {
+      "package": "pg-fixture-known-t1_format-0214@2.0.214",
+      "flagged": false,
+      "prob": 0.002036,
+      "chunks": 5,
+      "ms": 566.008,
+      "set": "known"
+    },
+    {
+      "package": "my-rei-browser-shim@1.0.7",
+      "flagged": false,
+      "prob": 0.002055,
+      "chunks": 2,
+      "ms": 647.704,
+      "set": "known"
+    },
+    {
+      "package": "@wxi-dev_serverless-tsc-config@1.0.3",
+      "flagged": false,
+      "prob": 0.002119,
+      "chunks": 1,
+      "ms": 284.516,
+      "set": "known"
+    },
+    {
+      "package": "@wxi-dev_serverless-tsc-config@1.0.2",
+      "flagged": false,
+      "prob": 0.002124,
+      "chunks": 1,
+      "ms": 205.273,
+      "set": "known"
+    }
+  ],
+  "cpu_latency_4thr_ms": {
+    "median": 76.719,
+    "mean": 96.241,
+    "p95": 164.889,
+    "max": 174.812
+  }
+}

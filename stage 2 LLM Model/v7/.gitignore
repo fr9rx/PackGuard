@@ -1,0 +1,10 @@
+model_int8/
+checkpoints/
+dataset/
+*.onnx
+*.pt
+*.pth
+*.npy
+*.tar.gz
+__pycache__/
+*.pyc
