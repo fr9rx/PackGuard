@@ -82,7 +82,7 @@ Papers:
 - Raff et al., "A New Burrows Wheeler Transform Markov Distance" (AAAI 2020)
 - Jiang et al., "'Low-Resource' Text Classification: A Parameter-Free Classification Method with Compressors" (ACL Findings 2023), together with the published critiques of its evaluation
 
-## 6. The reference sets
+## 6. The reference sets (finished)
 
 Observation so far: every time the malware and benign reference sets grew, detection improved and false alarms dropped. Stage 1 is a nearest-neighbour detector, so its bottleneck is coverage.
 
